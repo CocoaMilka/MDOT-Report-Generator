@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+    <body>
+
+        <!-- Page Header -->
+        <div class="box">
+
+            <table>
+
+                  <tr>
+
+                         <td style="text-align:left;">
+
+                               <img src="modot-logo.jpg" style="height:80px;">
+
+                         </td>
+
+                         <td style="width:85%; vertical-align: top;">
+
+                            <center>
+                                <font size="4">
+                                    Missouri Department of Transportation <br>
+                                    State Bridge Inspection Report <br /><br />
+                             </font>
+                            </center>
+
+
+                               <table style="width:100%">
+
+                                      <tr>
+
+                                            <td>
+
+                                                   COUNTY:
+
+                                            </td>
+
+                                            <td>
+
+                                                   DISTRICT:
+
+                                            </td>
+
+                                            <td>
+
+                                                   CLASS:
+
+                                            </td>
+
+                                            <td>
+
+                                                   FED_ID:
+
+                                            </td>
+
+                                            <td>
+
+                                                   BRIDGE:
+
+                                            </td>
+
+                                      </tr>
+
+                               </table>
+
+                         </td>
+
+                         <td style="text-align:right; vertical-align:top; width:15%">
+
+                               <span id="current-date"></span><br />
+
+                               <span id="current-time"></span>
+
+                               <script>
+
+                                      var now = new Date();
+
+                                      var options = { year: 'numeric', month: 'long', day: 'numeric' };
+
+                                      var date = now.toLocaleDateString('en-US', options);
+
+                                      var hours = now.getHours();
+
+                                      var minutes = now.getMinutes();
+
+                                      var seconds = now.getSeconds();
+
+                                      var ampm = hours >= 12 ? 'PM' : 'AM';
+
+                                      hours = hours % 12;
+
+                                      hours = hours ? hours : 12; // the hour '0' should be '12'
+
+                                      document.getElementById("current-date").innerHTML = date;
+
+                                      document.getElementById("current-time").innerHTML = hours + ":" + minutes + ":" + seconds + " " + ampm;
+
+                               </script>
+
+                         </td>
+
+                  </tr>
+
+            </table>
+
+        </div>
+
+
+        <!-- Main Table -->
+        <table class="table-outline" cellpadding="0" cellspacing="0">
+
+            <!-- Column Names -->
+            <tr style="outline: thin solid;">
+                <td colspan="3"><h4>***GENERAL STRUCTURE INFORMATION***</h4></td> <td colspan="4"><h4>***BRIDGE INSPECTION INFORMATION***</h4></td>
+            </tr>
+
+            <!-- Column Attributes -->
+            <tr>
+                <th rowspan="2"><p>ROUTE: </p></th> <th rowspan="2"><p>SPANS:</p></th> <th rowspan="2"><p>PLACE CODES:</p></th> <th colspan="2"><p>DATE: </p></th> <th colspan="2"><p>RESPONSIBILITY:</p></th>
+            </tr>
+
+            <tr>
+                <td colpan="4", rowspan="2"><p>GENERAL INSPECTION COMMENTS:</p></td>
+            </tr>
+
+
+                <!-- Table data -->
+                <tr>
+                    <td><p>data 1</p></td> <td><p>data 2</p></td> <td><p>data 3</p></td>
+                </tr>
+
+
+            <!-- DECK COMPONENTS Rows -->
+            <tr style="outline: thin solid;">
+                <td colspan="7"><h4>***DECK COMPONENTS***</h4></td>
+            </tr>
+
+            <!-- Column Attributes-->
+            <tr>
+                <th><p>SPAN TYPE-#</p></th> <th><p>COMPONENT:</p></th> <th><p>MATERIAL: </p></th> <th><p>CONSTRUCTION: </p></th> <th><p>MEASUREMENT: </p></th> <th><p>SEVERITY:</p></th> <th><p>COMMENTS: </p></th>
+            </tr>
+
+                <!-- Table data-->
+                <tr>
+                    <td><p>data 1</p></td> <td><p>data 2</p></td> <td><p>data 3</p></td> <td><p>data 4</p></td> <td><p>data 5</p></td> <td><p>data 6</p></td>
+                </tr>
+                <tr>
+                    <td><p>data a</p></td> <td><p>data b</p></td> <td><p>data c</p></td> <td><p>data d</p></td> <td><p>data e</p></td> <td><p>data f</p></td>
+                </tr>
+
+
+            <!-- Column Names -->
+            <tr style="outline: thin solid;">
+                <td colspan="3"><h4>***COMPUTER GENERATED RATINGS AND DEFICIENCY ITEMS***</h4></td> <td colspan="4"><h4>***ADVANCED SIGN INFORMATION***</h4></td>
+            </tr>
+
+            <!-- Column Attributes-->
+            <tr>
+                <th><p>Rated Item</p></th> <th><p>Rating</p></th> <th><p>Rating Date</p></th> <th><p>Sign #</p></th> <th><p>Sign Type</p></th> <th><p>Rating Date</p></th> <th><p>Rating Date</p></th>
+            </tr>
+
+                    <!-- Table data-->
+                    <tr>
+                        <td><p>data 1</p></td> <td><p>data 2</p></td> <td><p>data 3</p></td> <td><p>data 4</p></td> <td><p>data 5</p></td> <td><p>data 6</p></td> <td><p>data 7</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>data a</p></td> <td><p>data b</p></td> <td><p>data c</p></td> <td><p>data d</p></td> <td><p>data e</p></td> <td><p>data f</p></td> <td><p>data g</p></td>
+                    </tr>
+        </table>
+
+    </body>
+</html>

@@ -1,0 +1,272 @@
+{
+  "name": "Mock Bridge",
+  "subClassId": 1,
+  "subFields": [
+    {
+      "__type": "DataFieldCategory:#",
+      "name": "DEFECTS​",
+      "subClassId": 1,
+      "subFields": [
+        {
+          "__type": "DataFieldCategory:#",
+          "name": "VERTICAL CRACKS​",
+          "subClassId": 1,
+          "subFields": [
+            {
+              "__type": "DataFieldCategory:#",
+              "name": "LOCATION​",
+              "subClassId": 1,
+              "subFields": [
+                {
+                  "__type": "DataFieldText:#",
+                  "name": "BEAM 1​",
+                  "subClassId": 3
+                }
+              ]
+            },
+            {
+              "__type": "DataFieldCategory:#",
+              "name": "CONDITION​",
+              "subClassId": 1,
+              "subFields": [
+                {
+                  "__type": "DataFieldText:#",
+                  "name": "SEVERE​",
+                  "subClassId": 3
+                }
+              ]
+            },
+            {
+              "__type": "DataFieldMeasurement:#",
+              "name": "MEASUREMENT​",
+              "subClassId": 2,
+              "measurements": [
+                {
+                  "__type": "SerializeMeasure_LineSeg:#",
+                  "measureType": 0,
+                  "length": 0.264467269,
+                  "vertices": [
+                    {
+                      "x": -0.161925092,
+                      "y": 0.8399344,
+                      "z": 0.280902624
+                    },
+                    {
+                      "x": -0.161925048,
+                      "y": 1.09213912,
+                      "z": 0.201305389
+                    },
+                    {
+                      "x": -0.161925077,
+                      "y": 1.32675922,
+                      "z": 0.281029046
+                    },
+                    {
+                      "x": -0.161925048,
+                      "y": 1.47585416,
+                      "z": 0.194575548
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+{
+          "__type": "DataFieldCategory:#",
+          "name": "SPALLING​",
+          "subClassId": 1,
+          "subFields": [
+            {
+              "__type": "DataFieldCategory:#",
+              "name": "LOCATION​",
+              "subClassId": 1,
+              "subFields": [
+                {
+                  "__type": "DataFieldText:#",
+                  "name": "BEAM 1​",
+                  "subClassId": 3
+                }
+              ]
+            },
+            {
+              "__type": "DataFieldCategory:#",
+              "name": "CONDITION​",
+              "subClassId": 1,
+              "subFields": [
+                {
+                  "__type": "DataFieldText:#",
+                  "name": "SEVERE​",
+                  "subClassId": 3
+                }
+              ]
+            },
+            {
+              "__type": "DataFieldMeasurement:#",
+              "name": "MEASUREMENT​",
+              "subClassId": 2,
+              "measurements": [
+                {
+                  "__type": "SerializeMeasure_LineSeg:#",
+                  "measureType": 0,
+                  "length": 0.264467269,
+                  "vertices": [
+                    {
+                      "x": -0.161925092,
+                      "y": 0.8399344,
+                      "z": 0.280902624
+                    },
+                    {
+                      "x": -0.161925048,
+                      "y": 1.09213912,
+                      "z": 0.201305389
+                    },
+                    {
+                      "x": -0.161925077,
+                      "y": 1.32675922,
+                      "z": 0.281029046
+                    },
+                    {
+                      "x": -0.161925048,
+                      "y": 1.47585416,
+                      "z": 0.194575548
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+{
+          "__type": "DataFieldCategory:#",
+          "name": "EFFLORESCENCE​",
+          "subClassId": 1,
+          "subFields": [
+            {
+              "__type": "DataFieldCategory:#",
+              "name": "LOCATION​",
+              "subClassId": 1,
+              "subFields": [
+                {
+                  "__type": "DataFieldText:#",
+                  "name": "BEAM 1​",
+                  "subClassId": 3
+                }
+              ]
+            },
+            {
+              "__type": "DataFieldCategory:#",
+              "name": "CONDITION​",
+              "subClassId": 1,
+              "subFields": [
+                {
+                  "__type": "DataFieldText:#",
+                  "name": "SEVERE​",
+                  "subClassId": 3
+                }
+              ]
+            },
+            {
+              "__type": "DataFieldMeasurement:#",
+              "name": "MEASUREMENT​",
+              "subClassId": 2,
+              "measurements": [
+                {
+                  "__type": "SerializeMeasure_LineSeg:#",
+                  "measureType": 0,
+                  "length": 0.264467269,
+                  "vertices": [
+                    {
+                      "x": -0.161925092,
+                      "y": 0.8399344,
+                      "z": 0.280902624
+                    },
+                    {
+                      "x": -0.161925048,
+                      "y": 1.09213912,
+                      "z": 0.201305389
+                    },
+                    {
+                      "x": -0.161925077,
+                      "y": 1.32675922,
+                      "z": 0.281029046
+                    },
+                    {
+                      "x": -0.161925048,
+                      "y": 1.47585416,
+                      "z": 0.194575548
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__type": "DataFieldCategory:#",
+      "name": "GENERAL INFO​",
+      "subClassId": 1,
+      "subFields": [
+        {
+          "__type": "DataFieldCategory:#",
+          "name": "INSPECTION DATE​",
+          "subClassId": 1,
+          "subFields": [
+            {
+              "__type": "DataFieldText:#",
+              "name": "5/3/2023​",
+              "subClassId": 3
+            }
+          ]
+        },
+        {
+          "__type": "DataFieldCategory:#",
+          "name": "INSPECTORS​",
+          "subClassId": 1,
+          "subFields": [
+            {
+              "__type": "DataFieldText:#",
+              "name": "Eliot Kimmel​",
+              "subClassId": 3
+            },
+            {
+              "__type": "DataFieldText:#",
+              "name": "Joshua Ghilino​",
+              "subClassId": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__type": "DataFieldCategory:#",
+      "name": "ELEMENTS​",
+      "subClassId": 1,
+      "subFields": [
+        {
+          "__type": "DataFieldCategory:#",
+          "name": "NEW CATEGORY",
+          "subClassId": 1,
+          "subFields": []
+        },
+        {
+          "__type": "DataFieldText:#",
+          "name": "BEAM1​",
+          "subClassId": 3
+        },
+        {
+          "__type": "DataFieldText:#",
+          "name": "BEAM2​",
+          "subClassId": 3
+        },
+        {
+          "__type": "DataFieldText:#",
+          "name": "COLUMN​",
+          "subClassId": 3
+        }
+      ]
+    }
+  ]
+}

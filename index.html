@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<style>
+
+       table-outline, th, td {
+
+             border: 1.5px;
+
+             border-style: solid;
+
+             text-align: center;
+
+       }
+
+ 
+
+       table-noborder, th, td {
+
+             border-style: none;
+
+       }
+
+ 
+
+       .box {
+
+             border: 1.5px;
+
+             border-style: solid;
+
+             text-align: left;
+
+             margin-bottom: 5px;
+
+       }
+
+</style>
+
+<html>
+
+<body>
+
+       <b>
+
+             <div class="box">
+
+                    <table>
+
+                          <tr>
+
+                                 <td style="text-align:left;">
+
+                                       <img src="modot-logo.png" style="height:80px;">
+
+                                 </td>
+
+                                 <td style="width:85%; vertical-align: top;">
+
+                                       <font size="4">
+
+                                              Missouri Department of Transportation <br>
+
+                                              State Bridge Inspection Report <br /><br />
+
+                                       </font>
+
+                                       <table style="width:100%">
+
+                                              <tr>
+
+                                                    <td>
+
+                                                           COUNTY:
+
+                                                    </td>
+
+                                                    <td>
+
+                                                           DISTRICT:
+
+                                                    </td>
+
+                                                    <td>
+
+                                                           CLASS:
+
+                                                    </td>
+
+                                                    <td>
+
+                                                           FED_ID:
+
+                                                    </td>
+
+                                                    <td>
+
+                                                           BRIDGE:
+
+                                                    </td>
+
+                                              </tr>
+
+                                       </table>
+
+                                 </td>
+
+                                 <td style="text-align:right; vertical-align:top; width:15%">
+
+                                       <span id="current-date"></span><br />
+
+                                       <span id="current-time"></span>
+
+                                       <script>
+
+                                              var now = new Date();
+
+                                              var options = { year: 'numeric', month: 'long', day: 'numeric' };
+
+                                              var date = now.toLocaleDateString('en-US', options);
+
+                                              var hours = now.getHours();
+
+                                              var minutes = now.getMinutes();
+
+                                              var seconds = now.getSeconds();
+
+                                              var ampm = hours >= 12 ? 'PM' : 'AM';
+
+                                              hours = hours % 12;
+
+                                              hours = hours ? hours : 12; // the hour '0' should be '12'
+
+                                              document.getElementById("current-date").innerHTML = date;
+
+                                              document.getElementById("current-time").innerHTML = hours + ":" + minutes + ":" + seconds + " " + ampm;
+
+                                       </script>
+
+                                 </td>
+
+                          </tr>
+
+                    </table>
+
+             </div>
+
+             <div class="box">
+
+                    <table style="width:100%; margin:0px">
+
+                          <tr>
+
+                                <!-- General Structure left column -->
+                                 <td style="width:60%">
+
+                                       <table style="width:100%; height:100%; vertical-align:top; border:1.5px; border-style:solid">
+
+                                              ***GENERAL STRUCTURE INFORMATION***
+
+                                              <tr>
+
+                                                    <td>
+
+                                                           asdf
+
+                                                    </td>
+
+                                                    <td>
+
+                                                           asdf
+
+                                                    </td>
+
+                                                    <td>
+
+                                                           asdf
+
+                                                    </td>
+
+                                              </tr>
+
+                                       </table>
+
+                                 </td>
+
+                                <!-- Inspection right column  -->
+                                 <td style="width:40%">
+
+                                       <table style="width:100%; height:100%; vertical-align:top; border:1.5px; border-style:solid">
+
+                                              ***BRIDGE INSPECTION INFORMATION***
+
+                                              <tr>
+
+                                                    <td>
+
+                                                           asdf
+
+                                                    </td>
+
+                                              </tr>
+
+                                       </table>
+
+                                 </td>
+
+                          </tr>
+
+
+
+                    </table>
+                          <!-- Second row deck components-->
+
+                          <tr>
+                            <h3>***DECK COMPONENTS***</h3>
+                          </tr>
+             </div>
+
+       </b>
+
+</body>
+
+ 
+
+</html>
