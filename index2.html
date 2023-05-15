@@ -10,13 +10,18 @@
     <body>
 
         <!-- File input -->
-        <center>
-            <div style="background-color: rgb(245, 255, 171); padding: .5px;">
-                <h3>Upload Bridge Data</h3>
-                <input type="file" id="file-input" />
-                <pre id="file-content"></pre>
-            </div>
-        </center>
+        <div class="file-form" id="file-form">
+            <button style="margin-top: 10px; margin-right: 10px; float: right;" id="hide-file-form" onclick="toggleForm()">Hide</button>
+            <h3>Upload Bridge Data</h3>
+            <p>Select the .json file generated from ARBI to automatically fill out the MoDOT form.</p>
+            <input type="file" id="file-input" accept=".json" />
+            <pre id="file-content"></pre>
+        </div>
+
+        <div hidden class="file-form" id="file-form-hidden">
+            <button style="margin-top: 10px; margin-right: 10px; float: right;" id="hide-file-form" onclick="toggleForm()">Show</button>
+            <br></br>
+        </div>
 
         <br>
 

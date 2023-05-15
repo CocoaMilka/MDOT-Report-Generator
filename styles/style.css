@@ -1,15 +1,9 @@
 .table-outline {
-
     border: 1.5px;
-
     border-style: solid;
-
     border-spacing: 0px;
-
     text-align: center;
-
     width: 100%;
-    
 }
 
 .table-noborder{
@@ -18,19 +12,20 @@
 }
 
 .box {
-
     border: 1.5px;
-
     border-style: solid;
-
     text-align: left;
-
     font-weight: bold;
-
     margin-bottom: 5px;
-
 }
 
 .upload-box {
     margin: auto;
+}
+
+.file-form {
+    text-align: center;
+    width: 100%;
+    padding: .5px;
+    background-color: rgb(245, 255, 171);
 }
