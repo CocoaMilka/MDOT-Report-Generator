@@ -29,3 +29,28 @@
     padding: .5px;
     background-color: rgb(245, 255, 171);
 }
+
+/* v2 CSS */
+
+.outlined-table {
+    width: 100%;
+    border: 1px solid black;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.outlined-table th {
+    border-style: none;
+    border-collapse: collapse;
+    padding: 0px;
+    text-align: center;
+}
+
+.outlined-table td {
+    border-style: none;
+    border-collapse: collapse;
+    padding: 0px;
+}
+
+

@@ -129,7 +129,7 @@
         </div>
 
 
-        <!-- Main Table -->
+        <!-- Main Table V1 -->
         <table class="table-outline" cellpadding="0" cellspacing="0">
 
             <!-- Column Names -->
@@ -194,6 +194,168 @@
                     <tr>
                         <td><p>data a</p></td> <td><p>data b</p></td> <td><p>data c</p></td> <td><p>data d</p></td> <td><p>data e</p></td> <td><p>data f</p></td> <td><p>data g</p></td>
                     </tr>
+        </table>
+
+        <br></br>
+
+        <!-- Main Table V2 -->
+        <table class="outlined-table">
+            
+            <!-- Table is split into 2 main tables -->
+            <!-- First row simply holds row names -->
+            <tr>
+                <th>
+                    <table class="outlined-table">
+                        <th style="text-align: center;">***GENERAL STRUCTURE INFORMATION***</th>
+                    </table>
+                </th>
+
+                <th>
+                    <table class="outlined-table">
+                        <th style="text-align: center;">***BRIDGE INSPECTION INFORMATION***</th>
+                    </table>
+                </th>
+            </tr>
+
+            <!-- Second Row (First data row) -->
+            <tr>
+                <!-- Left Column -->
+                <td>
+                    <table class="outlined-table">
+                        <tr>
+                            <td>
+                                <!-- ROUTE table -->
+                                <table class="outlined-table">
+                                    <colgroup>
+                                        <col style="text-align: right;">
+                                    </colgroup>
+                                    <th>ROUTE:</th>
+                                        <tr>
+                                            <th>FEATURE:</th>
+                                        </tr>
+                                        <tr>
+                                            <th>STATUS:</th>
+                                        </tr>
+                                        <tr>
+                                            <th>LOG MILE:</th>
+                                        </tr>
+                                        <tr>
+                                            <th>DETOUR:</th>
+                                        </tr>
+                                        <tr>
+                                            <th>NHS:</th>
+                                        </tr>
+                                        <tr>
+                                            <th>BUILT:</th>
+                                        </tr>
+                                        <tr>
+                                            <th>REHAB:</th>
+                                        </tr>
+                                        <tr>
+                                            <th>LOCATION:</th>
+                                        </tr>
+                                        <tr>
+                                            <th>LATITUDE:</th>
+                                        </tr>
+                                        <tr>
+                                            <th>LONGITUDE:</th>
+                                        </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <!-- SPANS table -->
+                                <table class="outlined-table">
+                                    <th>#SPANS:</th>
+                                        <tr>
+                                            <th>LANES ON:</th>
+                                        </tr>
+                                        <tr>
+                                            <th>LANES UNDER:</th>
+                                        </tr>
+                                        <tr>
+                                            <th>COMPASS DIRECTION:</th>
+                                        </tr>
+                                        <tr>
+                                            <th>DIRECTION OF TRAFFIC:</th>
+                                        </tr>
+                                        <tr>
+                                            <th>FUNCTIONAL CLASS:</th>
+                                        </tr>
+                                        <tr>
+                                            <th>NBI OWNER:</th>
+                                        </tr>
+                                        <tr>
+                                            <th>NBI MAINTAINED:</th>
+                                        </tr>
+                                        <tr>
+                                            <th>MAINTENANCE DISTRICT:</th>
+                                        </tr>
+                                        <tr>
+                                            <th>MAINTENANCE COUNTY:</th>
+                                        </tr>
+                                        <tr>
+                                            <th>SUB AREA:</th>
+                                        </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <!-- PLACE CODE table -->
+                                <table class="outlined-table">
+                                    <th>PLACE CODE:</th>
+                                        <tr>
+                                            <td>3</td>
+                                        </tr>
+                                </table>
+                            </td>
+
+                        </tr>
+                    </table>  
+                </td>
+
+                <!-- Right Column -->
+                <td>
+                    <!-- Single column table for Bridge Inspection Information and General Inspection Comments -->
+                    <table class="outlined-table">
+                        <tr>
+                            <th>DATE:</th> <th>RESPONSIBILITY:</th>
+                        </tr>
+                        <tr>
+                            <th>FREQUENCY:</th> <th>CALCULATED INTERVAL**:</th>
+                        </tr>
+                        <tr>
+                            <th>TEAM LEADER:</th> <th>ELEMENT:</th>
+                        </tr>
+                        <tr>
+                            <th>INSPECTOR 2:</th> <th>INSPECTOR 4:</th>
+                        </tr>
+                        <tr>
+                            <th>INSPECTOR 3:</th> <th>INSPECTOR 5:</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2">** When calculated interval exceeds the frequency, a justification comment per BIRM is required.</td>
+                        </tr>
+
+                        <tr>
+                            <table class="outlined-table">
+                                <tr>
+                                    <th>GENERAL INSPECTION COMMENTS</th>
+                                </tr>
+                            </table>
+                        </tr>
+                    </table>
+
+
+
+                </td>
+            </tr>
+
+
+            <tr>
+
+            </tr>
+            <tr>
+                
+            </tr>
         </table>
 
     </body>
