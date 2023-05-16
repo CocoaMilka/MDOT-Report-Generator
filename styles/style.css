@@ -32,25 +32,16 @@
 
 /* v2 CSS */
 
-.outlined-table {
-    width: 100%;
-    border: 1px solid black;
-    border-spacing: 0px;
-    border-collapse: collapse;
+.table-main {
+    outline: solid;
+}
+
+th[scope='col'] {
     text-align: center;
+    background-color: aqua;
 }
 
-.outlined-table th {
-    border-style: none;
-    border-collapse: collapse;
-    padding: 0px;
-    text-align: center;
+.table-wrapper {
+    /* */
 }
-
-.outlined-table td {
-    border-style: none;
-    border-collapse: collapse;
-    padding: 0px;
-}
-
 
