@@ -204,127 +204,125 @@
         <div class="table-wrapper">
             <table class="table-main">
                 
-                <!-- Table is split into 2 main tables -->
-                <!-- First row simply holds row names -->
                 <tr>
                     <th scope="col">***GENERAL STRUCTURE INFORMATION***</th>
 
                     <th scope="col">***BRIDGE INSPECTION INFORMATION***</th>
                 </tr>
 
-                <!-- Second Row (First data row) -->
+                <!-- Second Row (First data row) LEFT and RIGHT columns -->
                 <tr>
                     <!-- Left Column -->
                     <td>
-                        <table class="outlined-table">
+                        <table class="table-nested">
                             <tr>
                                 <td>
                                     <!-- ROUTE table -->
-                                    <table class="outlined-table">
+                                    <table>
 
                                         <!-- ROUTE Labeles + Data -->
-                                        <th scope="row">ROUTE:</th>                <td>data</td>
+                                        <th scope="row">ROUTE:</th>                <td id="route_GSI">data</td>
                                             <tr>
-                                                <th scope="row">FEATURE:</th>       <td>data</td>
+                                                <th scope="row">FEATURE:</th>       <td id="feature_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">STATUS:</th>       <td>data</td>
+                                                <th scope="row">STATUS:</th>       <td id="status_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">LOG MILE:</th>       <td>data</td>
+                                                <th scope="row">LOG MILE:</th>       <td id="log_mile_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">DETOUR:</th>       <td>data</td>
+                                                <th scope="row">DETOUR:</th>       <td id="detour_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">NHS:</th>       <td>data</td>
+                                                <th scope="row">NHS:</th>       <td id="nhs_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">BUILT:</th>       <td>data</td>
+                                                <th scope="row">BUILT:</th>       <td id="built_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">REHAB:</th>       <td>data</td>
+                                                <th scope="row">REHAB:</th>       <td id="rehab_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">LOCATION:</th>       <td>data</td>
+                                                <th scope="row">LOCATION:</th>       <td id="location_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">LATITUDE:</th>       <td>data</td>
+                                                <th scope="row">LATITUDE:</th>       <td id="latitude_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">LONGITUDE:</th>       <td>data</td>
+                                                <th scope="row">LONGITUDE:</th>       <td id="longitude_GSI">data</td>
                                             </tr>
                                     </table>
                                 </td>
                                 <td>
                                     <!-- SPANS table -->
-                                    <table class="outlined-table">
-                                        <th scope="row">#SPANS:</th>       <td>data</td>
+                                    <table>
+                                        <th scope="row">#SPANS:</th>       <td id="#spans_GSI">data</td>
                                             <tr>
-                                                <th scope="row">LANES ON:</th>       <td>data</td>
+                                                <th scope="row">LANES ON:</th>       <td id="lanes_on_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">LANES UNDER:</th>       <td>data</td>
+                                                <th scope="row">LANES UNDER:</th>       <td id="lanes_under_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">COMPASS DIRECTION:</th>       <td>data</td>
+                                                <th scope="row">COMPASS DIRECTION:</th>       <td id="compass_direction_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">DIRECTION OF TRAFFIC:</th>       <td>data</td>
+                                                <th scope="row">DIRECTION OF TRAFFIC:</th>       <td id="direction_of_traffic_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">FUNCTIONAL CLASS:</th>       <td>data</td>
+                                                <th scope="row">FUNCTIONAL CLASS:</th>       <td id="functional_class_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">NBI OWNER:</th>       <td>data</td>
+                                                <th scope="row">NBI OWNER:</th>       <td id="nbi_owner_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">NBI MAINTAINED:</th>       <td>data</td>
+                                                <th scope="row">NBI MAINTAINED:</th>       <td id="nbi_maintained_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">MAINTENANCE DISTRICT:</th>       <td>data</td>
+                                                <th scope="row">MAINTENANCE DISTRICT:</th>       <td id="maintenance_district_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">MAINTENANCE COUNTY:</th>       <td>data</td>
+                                                <th scope="row">MAINTENANCE COUNTY:</th>       <td id="maintenance_county_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">SUB AREA:</th>       <td>data</td>
+                                                <th scope="row">SUB AREA:</th>       <td id="sub_area_GSI">data</td>
                                             </tr>
                                     </table>
                                 </td>
                                 <td>
                                     <!-- PLACE CODE table -->
-                                    <table class="outlined-table">
-                                        <th scope="row">PLACE CODE:</th>       <td>data</td>
+                                    <table>
+                                        <th scope="row">PLACE CODE:</th>       <td id="place_code_GSI">data</td>
                                             <tr>
-                                                <th scope="row">LENGTH:</th>       <td>data</td>
+                                                <th scope="row">LENGTH:</th>       <td id="length_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">MAXIMUM SPAN:</th>       <td>data</td>
+                                                <th scope="row">MAXIMUM SPAN:</th>       <td id="maximum_span_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">APPROACH ROADWAY:</th>       <td>data</td>
+                                                <th scope="row">APPROACH ROADWAY:</th>       <td id="approach_roadway_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">CURB TO CURB:</th>       <td>data</td>
+                                                <th scope="row">CURB TO CURB:</th>       <td id="curb_to_curb_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">OUT TO OUT:</th>       <td>data</td>
+                                                <th scope="row">OUT TO OUT:</th>       <td id="out_to_out_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">AADT:</th>       <td>data</td>
+                                                <th scope="row">AADT:</th>       <td id="aadt_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">AADT YEAR:</th>       <td>data</td>
+                                                <th scope="row">AADT YEAR:</th>       <td id="aadt_year_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">AADT TRUCK:</th>       <td>data</td>
+                                                <th scope="row">AADT TRUCK:</th>       <td id="aadt_truck_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">FUTURE AADT:</th>       <td>data</td>
+                                                <th scope="row">FUTURE AADT:</th>       <td id="future_aadt_GSI">data</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">FUTURE AADT YEAR:</th>       <td>data</td>
+                                                <th scope="row">FUTURE AADT YEAR:</th>       <td id="future_aadt_year_GSI">data</td>
                                             </tr>
                                     </table>
                                 </td>
@@ -336,54 +334,52 @@
                     <!-- Right Column -->
                     <td>
                         <!-- Single column table for Bridge Inspection Information and General Inspection Comments -->
-                        <table>
+                        <table class="table-nested">
                             <!-- Inspection table + data -->
                             <tr>
-                                <table>
-                                    <tr>
-                                        <th scope="row">DATE:</th>      <td>data</td>
-                                    </tr>
-
-                                    <tr>
-                                        <th scope="row">RESPONSIBILITY:</th>      <td>data</td>
-                                    </tr>
-
-                                    <tr>
-                                        <th scope="row">FREQUENCY:</th>      <td>data</td>
-                                    </tr>
-                                    
-                                    <tr>
-                                        <th scope="row">CALCULATED INTERVAL**:</th>      <td>data</td>
-                                    </tr>
-                                    
-                                    <tr>
-                                        <th scope="row">ELEMENT:</th>      <td>data</td>
-                                    </tr>
-                                    
-                                    <tr>
-                                        <th scope="row">TEAM LEADER:</th>      <td>data</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td colspan="2">
-                                            ** When calculated interval exceeds the frequency, a justification comment per BIRM is required.
-                                        </td>
-                                    </tr>
-
-                                    <!-- Inspection comments -->
-                                    <tr>
-                                        <th scope="col" colspan="2">GENERAL INSPECTION COMMENTS</th>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <br>
-                                            <br>
-                                            <br>
-                                            <br>
-                                            <br>
-                                        </td>
-                                    </tr>
-                                </table>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <th scope="row">DATE:</th>      <td id="date_BII">data</td>
+                                        </tr>
+    
+                                        <tr>
+                                            <th scope="row">RESPONSIBILITY:</th>      <td id="responsibility_BII">data</td>
+                                        </tr>
+    
+                                        <tr>
+                                            <th scope="row">FREQUENCY:</th>      <td id="frequency_BII">data</td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <th scope="row">CALCULATED INTERVAL**:</th>      <td id="calculated_interval_BII">data</td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <th scope="row">ELEMENT:</th>      <td id="element_BII">data</td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <th scope="row">TEAM LEADER:</th>      <td id="team_leader_BII">data</td>
+                                        </tr>
+    
+                                        <tr>
+                                            <td colspan="2" style="padding-left: 0px;">
+                                                ** When calculated interval exceeds the frequency, a justification comment per BIRM is required.
+                                            </td>
+                                        </tr>
+    
+                                        <!-- Inspection comments -->
+                                        <tr>
+                                            <th scope="col" colspan="2">GENERAL INSPECTION COMMENTS</th>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                Comments go here
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
                             </tr>
                         </table>
 
@@ -392,13 +388,37 @@
                     </td>
                 </tr>
 
-
+                <!-- DECK COMPONENTS SECTION -->
                 <tr>
+                    <table>
+                        <tr>
+                            <th scope="col" colspan="2">
+                                ***DECK COMPONENTS***
+                            </th>
+                        </tr>
+        
+                        <tr>
+                            <th scope="col">
+                                SPAN TYPE-#
+                            </th>
+                            <th scope="col">
+                                COMPONENT
+                            </th>
+                            <th scope="col">
+                                MATERIAL
+                            </th>
+                            <th scope="col">
+                                CONSTRUCTION
+                            </th>
+                            <th scope="col">
+                                COMMENTS
+                            </th>
+                        </tr>
+                    </table>
+                </tr>
 
-                </tr>
-                <tr>
-                    
-                </tr>
+
+
             </table>
         </div>
 

@@ -33,7 +33,23 @@
 /* v2 CSS */
 
 .table-main {
+    table-layout: fixed;
     outline: solid;
+}
+
+.table-main td {
+    padding-left: 20px;
+    background-color: rgb(169, 169, 255);
+}
+
+.table-main tr {
+    background-color: rgb(217, 255, 163);
+}
+
+.table-nested {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(233, 210, 255);
 }
 
 th[scope='col'] {
@@ -41,7 +57,8 @@ th[scope='col'] {
     background-color: aqua;
 }
 
-.table-wrapper {
-    /* */
+th[scope='row'] {
+    text-align: right;
 }
+
 
