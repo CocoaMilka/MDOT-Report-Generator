@@ -4,7 +4,6 @@
 
 <head>
     <link rel="stylesheet" href="/styles/style.css">
-    <script src="script.js"></script>
 </head>
 
     <body>
@@ -204,7 +203,8 @@
         <div class="table-wrapper">
             <table class="table-main">
                 
-                <tr>
+                <!-- Column names -->
+                <tr style="border-bottom: solid;">
                     <th scope="col">***GENERAL STRUCTURE INFORMATION***</th>
 
                     <th scope="col">***BRIDGE INSPECTION INFORMATION***</th>
@@ -214,7 +214,7 @@
                 <tr>
                     <!-- Left Column -->
                     <td>
-                        <table class="table-nested">
+                        <table class="table-nested" style="border-right: solid;">
                             <tr>
                                 <td>
                                     <!-- ROUTE table -->
@@ -334,11 +334,12 @@
                     <!-- Right Column -->
                     <td>
                         <!-- Single column table for Bridge Inspection Information and General Inspection Comments -->
-                        <table class="table-nested">
+                        <table style="width: 100%; height: 100%;">
+                            
                             <!-- Inspection table + data -->
                             <tr>
                                 <td>
-                                    <table>
+                                    <table class="table-nested" id="BII_table">
                                         <tr>
                                             <th scope="row">DATE:</th>      <td id="date_BII">data</td>
                                         </tr>
@@ -360,18 +361,18 @@
                                         </tr>
                                         
                                         <tr>
-                                            <th scope="row">TEAM LEADER:</th>      <td id="team_leader_BII">data</td>
+                                            <th scope="row">INSPECTOR:</th>      <td id="team_leader_BII">data</td>
                                         </tr>
     
                                         <tr>
-                                            <td colspan="2" style="padding-left: 0px;">
+                                            <td colspan="2" style="text-align: center;">
                                                 ** When calculated interval exceeds the frequency, a justification comment per BIRM is required.
                                             </td>
                                         </tr>
     
                                         <!-- Inspection comments -->
                                         <tr>
-                                            <th scope="col" colspan="2">GENERAL INSPECTION COMMENTS</th>
+                                            <th scope="col" colspan="2" style="border-top: solid; border-bottom: solid;">GENERAL INSPECTION COMMENTS</th>
                                         </tr>
                                         <tr>
                                             <td colspan="2">
@@ -387,34 +388,45 @@
 
                     </td>
                 </tr>
+            </table>
 
-                <!-- DECK COMPONENTS SECTION -->
+            <br>
+
+            <!-- DECK COMPONENTS SECTION -->
+            <table class="table-main" id="deck_table">
                 <tr>
-                    <table>
-                        <tr>
-                            <th scope="col" colspan="2">
-                                ***DECK COMPONENTS***
-                            </th>
-                        </tr>
-        
-                        <tr>
-                            <th scope="col">
-                                SPAN TYPE-#
-                            </th>
-                            <th scope="col">
-                                COMPONENT
-                            </th>
-                            <th scope="col">
-                                MATERIAL
-                            </th>
-                            <th scope="col">
-                                CONSTRUCTION
-                            </th>
-                            <th scope="col">
-                                COMMENTS
-                            </th>
-                        </tr>
-                    </table>
+                    <th scope="col" colspan="6" style="border-bottom: solid;">
+                        ***DECK COMPONENTS***
+                    </th>
+                </tr>
+
+                <!-- Column names -->
+                <tr>
+                    <th scope="col">
+                        SPAN TYPE-#
+                    </th>
+                    <th scope="col">
+                        DEFECT
+                    </th>
+                    <th scope="col">
+                        LOCATION
+                    </th>
+                    <th scope="col">
+                        CONDITION
+                    </th>
+                    <th scope="col">
+                        MEASUREMENT
+                    </th>
+                    <th scope="col">
+                        COMMENTS
+                    </th>
+                </tr>
+
+                <!-- Generate a row for each entry -->
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
 
 
@@ -422,5 +434,7 @@
             </table>
         </div>
 
+        <!-- Link script at the end so elements can be accessed through script properly -->
+        <script src="script.js"></script>
     </body>
 </html>

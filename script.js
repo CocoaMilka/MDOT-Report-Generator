@@ -1,26 +1,76 @@
-// Calls getFile() when a file has been uploaded to the input form, basic JS syntax rookie
-//document.getElementById('file-input').addEventListener('change', getFile);
+const fileInput = document.getElementById("file-input");
 
-function getFile(event)
-{
-    const input = event.target
-    print(input)
-}
+const test = document.getElementById("testing")
 
-function readFileContent(file)
-{
-    const reader = new FileReader()
-    return new Promise((resolve, reject) => 
-    {
-        reader.onload = event => resolve(event.target.result)
-        reader.onerror = error => reject(error)
-        reader.readAsText(file)
+fileInput.addEventListener("change", () => {
+    const inputReader = new FileReader();
+
+    //.files returns an array in case multiple files are uploaded, select first element since upload form is limited to one file at a time
+    inputReader.readAsText(fileInput.files[0]);
+
+    //Reading file takes time, will execute once file is loaded then convert JSON into a javascript object
+    inputReader.addEventListener("load", () => {
+        data = JSON.parse(inputReader.result);
+
+        const iterate = (data) => {
+            Object.keys(data).forEach(key => {
+        
+            console.log(`key: ${key}, value: ${data[key]}`)
+        
+            if (typeof data[key] === 'object' && data[key] !== null) {
+                    iterate(data[key])
+                }
+            })
+        }
+
+        parseData(data);
     })
+})
+
+
+function parseData(data)
+{
+    //Grab tables to write to
+    BII_Table = document.getElementById("BII_table");
+    Deck_Table = document.getElementById("deck_table");
+
+    let defects = data["subFields"][0].subFields
+
+    //Manual parse for inspection date, bad practice but JSON structure is unpredictable
+    document.getElementById("date_BII").textContent = data["subFields"][1]["subFields"][0]["subFields"][0]["name"];
+
+    for (var i in defects)
+    {
+        console.log(defects[i].name);
+        newRow = Deck_Table.insertRow(-1);
+        
+        let text = "NULL"
+
+        for (let j = 0; j < 6; j++)
+        {
+            switch(j)
+            {
+                case 0:
+                    text = i;
+                    break;
+                case 1:
+                    text = defects[i].name;
+                    break;
+                case 2:
+                    text = "help";
+                    break;
+                default:
+                    text = "NULL";
+            }
+
+            newCell = newRow.insertCell(-1);
+            let newText = document.createTextNode(text);
+            newCell.appendChild(newText);
+        }
+    }
 }
 
 //For hiding file input form
-//document.getElementById("hide-file-form").addEventListener("click", hideForm);
-
 function toggleForm()
 {
     var form = document.getElementById("file-form");
