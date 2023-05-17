@@ -18,8 +18,8 @@
         </div>
 
         <div hidden class="file-form" id="file-form-hidden">
-            <button style="margin-top: 10px; margin-right: 10px; float: right;" id="hide-file-form" onclick="toggleForm()">Show</button>
-            <br></br>
+            <button style="margin: 10px; float: right;" id="hide-file-form" onclick="toggleForm()">Show</button>
+            <br><br>
         </div>
 
         <br>
@@ -128,7 +128,7 @@
         </div>
 
         <!-- Main Table V1 -->
-        <div>
+        <div hidden>
             <table class="table-outline" cellpadding="0" cellspacing="0">
 
                 <!-- Column Names -->
@@ -359,10 +359,6 @@
                                         <tr>
                                             <th scope="row">ELEMENT:</th>      <td id="element_BII">data</td>
                                         </tr>
-                                        
-                                        <tr>
-                                            <th scope="row">INSPECTOR:</th>      <td id="team_leader_BII">data</td>
-                                        </tr>
     
                                         <tr>
                                             <td colspan="2" style="text-align: center;">
@@ -376,7 +372,7 @@
                                         </tr>
                                         <tr>
                                             <td colspan="2">
-                                                Comments go here
+                                                <br>
                                             </td>
                                         </tr>
                                     </table>
@@ -393,7 +389,7 @@
             <br>
 
             <!-- DECK COMPONENTS SECTION -->
-            <table class="table-main" id="deck_table">
+            <table class="table-main" id="deck_table" style="text-align: center;">
                 <tr>
                     <th scope="col" colspan="6" style="border-bottom: solid;">
                         ***DECK COMPONENTS***
@@ -422,14 +418,47 @@
                     </th>
                 </tr>
 
-                <!-- Generate a row for each entry -->
+                <!-- Generated rows are inserted here -->
+
+            </table>
+
+            <br>
+
+            <!-- CGRaDI and ASI -->
+            <table class="table-main" id="CGR_table" style="text-align: center;">
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <th scope="col" colspan="3" style="border-bottom: solid;">
+                        ***COMPUTER GENERATED RATINGS AND DEFICIENCY ITEMS***
+                    </th>
+
+                    <th scope="col" colspan="3" style="border-bottom: solid;">
+                        ***ADVANCED SIGN INFORMATION***
+                    </th>
                 </tr>
 
+                <!-- Column names -->
+                <tr>
+                    <th scope="col">
+                        Rated Item
+                    </th>
+                    <th scope="col">
+                        Rating
+                    </th>
+                    <th scope="col">
+                        Rating Date
+                    </th>
+                    <th scope="col">
+                        Sign #
+                    </th>
+                    <th scope="col">
+                        Sign Type
+                    </th>
+                    <th scope="col">
+                        Rating Date
+                    </th>
+                </tr>
 
+                <!-- Generated rows are inserted here -->
 
             </table>
         </div>

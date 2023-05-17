@@ -96,7 +96,7 @@
               "subFields": [
                 {
                   "__type": "DataFieldText:#",
-                  "name": "SEVERE​",
+                  "name": "SMALL",
                   "subClassId": 3
                 }
               ]
@@ -161,7 +161,7 @@
               "subFields": [
                 {
                   "__type": "DataFieldText:#",
-                  "name": "SEVERE​",
+                  "name": "FINE",
                   "subClassId": 3
                 }
               ]
