@@ -33,10 +33,11 @@
 /* v2 CSS */
 
 * {
-    font-size: small;
+    font-size: x-small;
 }
 
 table {
+    border: 1.5px;
     border-collapse: collapse;
     border-spacing: 0px;
     padding: 0px;
@@ -90,4 +91,10 @@ th[scope='col'] {
 th[scope='row'] {
     text-align: right;
 }
+
+@media print {
+    .noPrint{
+      display:none;
+    }
+  }
 

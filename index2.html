@@ -7,461 +7,400 @@
 </head>
 
     <body>
-
-        <!-- File input -->
-        <div class="file-form" id="file-form">
-            <button style="margin-top: 10px; margin-right: 10px; float: right;" id="hide-file-form" onclick="toggleForm()">Hide</button>
-            <h3>Upload Bridge Data</h3>
-            <p>Select the .json file generated from ARBI to automatically fill out the MoDOT form.</p>
-            <input type="file" id="file-input" accept=".json" />
-            <pre id="file-content"></pre>
-        </div>
-
-        <div hidden class="file-form" id="file-form-hidden">
-            <button style="margin: 10px; float: right;" id="hide-file-form" onclick="toggleForm()">Show</button>
-            <br><br>
-        </div>
-
-        <br>
-
-        <!-- Page Header -->
-        <div class="box">
-
-            <table>
-
-                  <tr>
-
-                         <td style="text-align:left;">
-
-                               <img src="/assets/modot-logo.jpg" style="height:80px;">
-
-                         </td>
-
-                         <td style="width:85%; vertical-align: top;">
-
-                            <center>
-                                <font size="4">
-                                    Missouri Department of Transportation <br>
-                                    State Bridge Inspection Report <br /><br />
-                             </font>
-                            </center>
-
-
-                               <table style="width:100%">
-
-                                      <tr>
-
-                                            <td>
-
-                                                   COUNTY:
-
-                                            </td>
-
-                                            <td>
-
-                                                   DISTRICT:
-
-                                            </td>
-
-                                            <td>
-
-                                                   CLASS:
-
-                                            </td>
-
-                                            <td>
-
-                                                   FED_ID:
-
-                                            </td>
-
-                                            <td>
-
-                                                   BRIDGE:
-
-                                            </td>
-
-                                      </tr>
-
-                               </table>
-
-                         </td>
-
-                         <td style="text-align:right; vertical-align:top; width:15%">
-
-                               <span id="current-date"></span><br />
-
-                               <span id="current-time"></span>
-
-                               <script>
-
-                                      var now = new Date();
-
-                                      var options = { year: 'numeric', month: 'long', day: 'numeric' };
-
-                                      var date = now.toLocaleDateString('en-US', options);
-
-                                      var hours = now.getHours();
-
-                                      var minutes = now.getMinutes();
-
-                                      var seconds = now.getSeconds();
-
-                                      var ampm = hours >= 12 ? 'PM' : 'AM';
-
-                                      hours = hours % 12;
-
-                                      hours = hours ? hours : 12; // the hour '0' should be '12'
-
-                                      document.getElementById("current-date").innerHTML = date;
-
-                                      document.getElementById("current-time").innerHTML = hours + ":" + minutes + ":" + seconds + " " + ampm;
-
-                               </script>
-
-                         </td>
-
-                  </tr>
-
-            </table>
-
-        </div>
-
-        <!-- Main Table V1 -->
-        <div hidden>
-            <table class="table-outline" cellpadding="0" cellspacing="0">
-
-                <!-- Column Names -->
-                <tr style="outline: thin solid;">
-                    <td colspan="3"><h4>***GENERAL STRUCTURE INFORMATION***</h4></td> <td colspan="4"><h4>***BRIDGE INSPECTION INFORMATION***</h4></td>
-                </tr>
-    
-                <!-- Column Attributes -->
-                <tr>
-                    <th rowspan="2"><p>ROUTE:</p></th> <th rowspan="2"><p>SPANS:</p></th> <th rowspan="2"><p>PLACE CODES:</p></th> <th colspan="2"><p>DATE: </p></th> <th colspan="2"><p>RESPONSIBILITY:</p></th>
-                </tr>
-    
-                <tr>
-                    <!-- For spacing, check again later -->
-                    <td></td>
-                    <td colpan="4", rowspan="2"><p>GENERAL INSPECTION COMMENTS:</p></td>
-                </tr>
-    
-                    <!-- Table data -->
-                    <tr>
-                        <td><p>data 1</p></td> <td><p>data 2</p></td> <td><p>data 3</p></td>
-                    </tr>
-    
-                    <tr>
-                        <td><p>data a</p></td> <td><p>data b</p></td> <td><p>data c</p></td>
-                    </tr>
-    
-    
-                <!-- DECK COMPONENTS Rows -->
-                <tr style="outline: thin solid;">
-                    <td colspan="7"><h4>***DECK COMPONENTS***</h4></td>
-                </tr>
-    
-                <!-- Column Attributes-->
-                <tr>
-                    <th><p>SPAN TYPE-#</p></th> <th><p>COMPONENT:</p></th> <th><p>MATERIAL: </p></th> <th><p>CONSTRUCTION: </p></th> <th><p>MEASUREMENT: </p></th> <th><p>SEVERITY:</p></th> <th><p>COMMENTS:</p></th>
-                </tr>
-    
-                    <!-- Table data-->
-                    <tr>
-                        <td><p>data 1</p></td> <td><p>data 2</p></td> <td><p>data 3</p></td> <td><p>data 4</p></td> <td><p>data 5</p></td> <td><p>data 6</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>data a</p></td> <td><p>data b</p></td> <td><p>data c</p></td> <td><p>data d</p></td> <td><p>data e</p></td> <td><p>data f</p></td>
-                    </tr>
-    
-    
-                <!-- Column Names -->
-                <tr style="outline: thin solid;">
-                    <td colspan="3"><h4>***COMPUTER GENERATED RATINGS AND DEFICIENCY ITEMS***</h4></td> <td colspan="4"><h4>***ADVANCED SIGN INFORMATION***</h4></td>
-                </tr>
-    
-                <!-- Column Attributes-->
-                <tr>
-                    <th><p>Rated Item</p></th> <th><p>Rating</p></th> <th><p>Rating Date</p></th> <th><p>Sign #</p></th> <th><p>Sign Type</p></th> <th><p>Rating Date</p></th> <th><p>Rating Date</p></th>
-                </tr>
-    
-                        <!-- Table data-->
-                        <tr>
-                            <td><p>data 1</p></td> <td><p>data 2</p></td> <td><p>data 3</p></td> <td><p>data 4</p></td> <td><p>data 5</p></td> <td><p>data 6</p></td> <td><p>data 7</p></td>
-                        </tr>
-                        <tr>
-                            <td><p>data a</p></td> <td><p>data b</p></td> <td><p>data c</p></td> <td><p>data d</p></td> <td><p>data e</p></td> <td><p>data f</p></td> <td><p>data g</p></td>
-                        </tr>
-            </table>
-    
-            <br></br>
-        </div>
-
-
-        <!-- Main Table V2 -->
-        <div class="table-wrapper">
-            <table class="table-main">
+        <div class="noPrint">
+            <!-- File input -->
+            <div class="file-form" id="file-form">
+                <button style="margin-top: 10px; margin-right: 10px; float: right;" id="hide-file-form" onclick="toggleForm()">Hide</button>
+                <h3>Upload Bridge Data</h3>
+                <p>Select the .json file generated from ARBI to automatically fill out the MoDOT form.</p>
+                <input type="file" id="file-input" accept=".json" />
+                <pre id="file-content"></pre>
                 
-                <!-- Column names -->
-                <tr style="border-bottom: solid;">
-                    <th scope="col">***GENERAL STRUCTURE INFORMATION***</th>
 
-                    <th scope="col">***BRIDGE INSPECTION INFORMATION***</th>
-                </tr>
+                <input type="button" onclick="window.print();" value="Print Report" style="margin: 10px; float: right;"/>
+                <br><br><br>
+            </div>
 
-                <!-- Second Row (First data row) LEFT and RIGHT columns -->
-                <tr>
-                    <!-- Left Column -->
-                    <td>
-                        <table class="table-nested" style="border-right: solid;">
-                            <tr>
-                                <td>
-                                    <!-- ROUTE table -->
-                                    <table>
-
-                                        <!-- ROUTE Labeles + Data -->
-                                        <th scope="row">ROUTE:</th>                <td id="route_GSI">data</td>
-                                            <tr>
-                                                <th scope="row">FEATURE:</th>       <td id="feature_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">STATUS:</th>       <td id="status_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">LOG MILE:</th>       <td id="log_mile_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">DETOUR:</th>       <td id="detour_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">NHS:</th>       <td id="nhs_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">BUILT:</th>       <td id="built_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">REHAB:</th>       <td id="rehab_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">LOCATION:</th>       <td id="location_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">LATITUDE:</th>       <td id="latitude_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">LONGITUDE:</th>       <td id="longitude_GSI">data</td>
-                                            </tr>
-                                    </table>
-                                </td>
-                                <td>
-                                    <!-- SPANS table -->
-                                    <table>
-                                        <th scope="row">#SPANS:</th>       <td id="#spans_GSI">data</td>
-                                            <tr>
-                                                <th scope="row">LANES ON:</th>       <td id="lanes_on_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">LANES UNDER:</th>       <td id="lanes_under_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">COMPASS DIRECTION:</th>       <td id="compass_direction_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">DIRECTION OF TRAFFIC:</th>       <td id="direction_of_traffic_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">FUNCTIONAL CLASS:</th>       <td id="functional_class_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">NBI OWNER:</th>       <td id="nbi_owner_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">NBI MAINTAINED:</th>       <td id="nbi_maintained_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">MAINTENANCE DISTRICT:</th>       <td id="maintenance_district_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">MAINTENANCE COUNTY:</th>       <td id="maintenance_county_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">SUB AREA:</th>       <td id="sub_area_GSI">data</td>
-                                            </tr>
-                                    </table>
-                                </td>
-                                <td>
-                                    <!-- PLACE CODE table -->
-                                    <table>
-                                        <th scope="row">PLACE CODE:</th>       <td id="place_code_GSI">data</td>
-                                            <tr>
-                                                <th scope="row">LENGTH:</th>       <td id="length_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">MAXIMUM SPAN:</th>       <td id="maximum_span_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">APPROACH ROADWAY:</th>       <td id="approach_roadway_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">CURB TO CURB:</th>       <td id="curb_to_curb_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">OUT TO OUT:</th>       <td id="out_to_out_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">AADT:</th>       <td id="aadt_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">AADT YEAR:</th>       <td id="aadt_year_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">AADT TRUCK:</th>       <td id="aadt_truck_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">FUTURE AADT:</th>       <td id="future_aadt_GSI">data</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">FUTURE AADT YEAR:</th>       <td id="future_aadt_year_GSI">data</td>
-                                            </tr>
-                                    </table>
-                                </td>
-
-                            </tr>
-                        </table>  
-                    </td>
-
-                    <!-- Right Column -->
-                    <td>
-                        <!-- Single column table for Bridge Inspection Information and General Inspection Comments -->
-                        <table style="width: 100%; height: 100%;">
-                            
-                            <!-- Inspection table + data -->
-                            <tr>
-                                <td>
-                                    <table class="table-nested" id="BII_table">
-                                        <tr>
-                                            <th scope="row">DATE:</th>      <td id="date_BII">data</td>
-                                        </tr>
-    
-                                        <tr>
-                                            <th scope="row">RESPONSIBILITY:</th>      <td id="responsibility_BII">data</td>
-                                        </tr>
-    
-                                        <tr>
-                                            <th scope="row">FREQUENCY:</th>      <td id="frequency_BII">data</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                            <th scope="row">CALCULATED INTERVAL**:</th>      <td id="calculated_interval_BII">data</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                            <th scope="row">ELEMENT:</th>      <td id="element_BII">data</td>
-                                        </tr>
-    
-                                        <tr>
-                                            <td colspan="2" style="text-align: center;">
-                                                ** When calculated interval exceeds the frequency, a justification comment per BIRM is required.
-                                            </td>
-                                        </tr>
-    
-                                        <!-- Inspection comments -->
-                                        <tr>
-                                            <th scope="col" colspan="2" style="border-top: solid; border-bottom: solid;">GENERAL INSPECTION COMMENTS</th>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2">
-                                                <br>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-
-
-
-                    </td>
-                </tr>
-            </table>
+            <div hidden class="file-form" id="file-form-hidden">
+                <button style="margin: 10px; float: right;" id="hide-file-form" onclick="toggleForm()">Show</button>
+                <br><br>
+            </div>
 
             <br>
-
-            <!-- DECK COMPONENTS SECTION -->
-            <table class="table-main" id="deck_table" style="text-align: center;">
-                <tr>
-                    <th scope="col" colspan="6" style="border-bottom: solid;">
-                        ***DECK COMPONENTS***
-                    </th>
-                </tr>
-
-                <!-- Column names -->
-                <tr>
-                    <th scope="col">
-                        SPAN TYPE-#
-                    </th>
-                    <th scope="col">
-                        DEFECT
-                    </th>
-                    <th scope="col">
-                        LOCATION
-                    </th>
-                    <th scope="col">
-                        CONDITION
-                    </th>
-                    <th scope="col">
-                        MEASUREMENT
-                    </th>
-                    <th scope="col">
-                        COMMENTS
-                    </th>
-                </tr>
-
-                <!-- Generated rows are inserted here -->
-
-            </table>
-
-            <br>
-
-            <!-- CGRaDI and ASI -->
-            <table class="table-main" id="CGR_table" style="text-align: center;">
-                <tr>
-                    <th scope="col" colspan="3" style="border-bottom: solid;">
-                        ***COMPUTER GENERATED RATINGS AND DEFICIENCY ITEMS***
-                    </th>
-
-                    <th scope="col" colspan="3" style="border-bottom: solid;">
-                        ***ADVANCED SIGN INFORMATION***
-                    </th>
-                </tr>
-
-                <!-- Column names -->
-                <tr>
-                    <th scope="col">
-                        Rated Item
-                    </th>
-                    <th scope="col">
-                        Rating
-                    </th>
-                    <th scope="col">
-                        Rating Date
-                    </th>
-                    <th scope="col">
-                        Sign #
-                    </th>
-                    <th scope="col">
-                        Sign Type
-                    </th>
-                    <th scope="col">
-                        Rating Date
-                    </th>
-                </tr>
-
-                <!-- Generated rows are inserted here -->
-
-            </table>
         </div>
+
+        <!-- Table -->
+        <div>
+        <!-- Page Header -->
+        <!-- Eliot generated this header with chatGPT, I haven't gone through and reformatted it -->
+            <div class="box">
+
+                <table style="border: 1.5px;">
+
+                    <tr>
+
+                            <td style="text-align:left;">
+
+                                <img src="/assets/modot-logo.jpg" style="height:80px;">
+
+                            </td>
+
+                            <td style="width:85%; vertical-align: top;">
+
+                                <center>
+                                    <font size="4">
+                                        Missouri Department of Transportation <br>
+                                        State Bridge Inspection Report <br /><br />
+                                </font>
+                                </center>
+
+
+                                <table style="width:100%">
+
+                                        <tr>
+
+                                                <td>
+
+                                                    COUNTY:
+
+                                                </td>
+
+                                                <td>
+
+                                                    DISTRICT:
+
+                                                </td>
+
+                                                <td>
+
+                                                    CLASS:
+
+                                                </td>
+
+                                                <td>
+
+                                                    FED_ID:
+
+                                                </td>
+
+                                                <td>
+
+                                                    BRIDGE:
+
+                                                </td>
+
+                                        </tr>
+
+                                </table>
+
+                            </td>
+
+                            <td style="text-align:right; vertical-align:top; width:15%">
+
+                                <span id="current-date"></span><br />
+
+                                <span id="current-time"></span>
+
+                                <script>
+
+                                        var now = new Date();
+
+                                        var options = { year: 'numeric', month: 'long', day: 'numeric' };
+
+                                        var date = now.toLocaleDateString('en-US', options);
+
+                                        var hours = now.getHours();
+
+                                        var minutes = now.getMinutes();
+
+                                        var seconds = now.getSeconds();
+
+                                        var ampm = hours >= 12 ? 'PM' : 'AM';
+
+                                        hours = hours % 12;
+
+                                        hours = hours ? hours : 12; // the hour '0' should be '12'
+
+                                        document.getElementById("current-date").innerHTML = date;
+
+                                        document.getElementById("current-time").innerHTML = hours + ":" + minutes + ":" + seconds + " " + ampm;
+
+                                </script>
+
+                            </td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+            <!-- Main Table V2 -->
+            <div class="table-wrapper">
+                <table class="table-main">
+                    
+                    <!-- Column names -->
+                    <tr style="border-bottom: solid;">
+                        <th scope="col">***GENERAL STRUCTURE INFORMATION***</th>
+
+                        <th scope="col">***BRIDGE INSPECTION INFORMATION***</th>
+                    </tr>
+
+                    <!-- Second Row (First data row) LEFT and RIGHT columns -->
+                    <tr>
+                        <!-- Left Column -->
+                        <td>
+                            <table class="table-nested" style="border-right: solid;">
+                                <tr>
+                                    <td>
+                                        <!-- ROUTE table -->
+                                        <table>
+
+                                            <!-- ROUTE Labeles + Data -->
+                                            <th scope="row">ROUTE:</th>                <td id="route_GSI">data</td>
+                                                <tr>
+                                                    <th scope="row">FEATURE:</th>       <td id="feature_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">STATUS:</th>       <td id="status_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">LOG MILE:</th>       <td id="log_mile_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">DETOUR:</th>       <td id="detour_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">NHS:</th>       <td id="nhs_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">BUILT:</th>       <td id="built_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">REHAB:</th>       <td id="rehab_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">LOCATION:</th>       <td id="location_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">LATITUDE:</th>       <td id="latitude_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">LONGITUDE:</th>       <td id="longitude_GSI">data</td>
+                                                </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <!-- SPANS table -->
+                                        <table>
+                                            <th scope="row">#SPANS:</th>       <td id="#spans_GSI">data</td>
+                                                <tr>
+                                                    <th scope="row">LANES ON:</th>       <td id="lanes_on_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">LANES UNDER:</th>       <td id="lanes_under_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">COMPASS DIRECTION:</th>       <td id="compass_direction_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">DIRECTION OF TRAFFIC:</th>       <td id="direction_of_traffic_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">FUNCTIONAL CLASS:</th>       <td id="functional_class_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">NBI OWNER:</th>       <td id="nbi_owner_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">NBI MAINTAINED:</th>       <td id="nbi_maintained_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">MAINTENANCE DISTRICT:</th>       <td id="maintenance_district_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">MAINTENANCE COUNTY:</th>       <td id="maintenance_county_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">SUB AREA:</th>       <td id="sub_area_GSI">data</td>
+                                                </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <!-- PLACE CODE table -->
+                                        <table>
+                                            <th scope="row">PLACE CODE:</th>       <td id="place_code_GSI">data</td>
+                                                <tr>
+                                                    <th scope="row">LENGTH:</th>       <td id="length_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">MAXIMUM SPAN:</th>       <td id="maximum_span_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">APPROACH ROADWAY:</th>       <td id="approach_roadway_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">CURB TO CURB:</th>       <td id="curb_to_curb_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">OUT TO OUT:</th>       <td id="out_to_out_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">AADT:</th>       <td id="aadt_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">AADT YEAR:</th>       <td id="aadt_year_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">AADT TRUCK:</th>       <td id="aadt_truck_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">FUTURE AADT:</th>       <td id="future_aadt_GSI">data</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">FUTURE AADT YEAR:</th>       <td id="future_aadt_year_GSI">data</td>
+                                                </tr>
+                                        </table>
+                                    </td>
+
+                                </tr>
+                            </table>  
+                        </td>
+
+                        <!-- Right Column -->
+                        <td>
+                            <!-- Single column table for Bridge Inspection Information and General Inspection Comments -->
+                            <table style="width: 100%; height: 100%;">
+                                
+                                <!-- Inspection table + data -->
+                                <tr>
+                                    <td>
+                                        <table class="table-nested" id="BII_table">
+                                            <tr>
+                                                <th scope="row">DATE:</th>      <td id="date_BII">data</td>
+                                            </tr>
+        
+                                            <tr>
+                                                <th scope="row">RESPONSIBILITY:</th>      <td id="responsibility_BII">data</td>
+                                            </tr>
+        
+                                            <tr>
+                                                <th scope="row">FREQUENCY:</th>      <td id="frequency_BII">data</td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <th scope="row">CALCULATED INTERVAL**:</th>      <td id="calculated_interval_BII">data</td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <th scope="row">ELEMENT:</th>      <td id="element_BII">data</td>
+                                            </tr>
+        
+                                            <tr>
+                                                <td colspan="2" style="text-align: center;">
+                                                    ** When calculated interval exceeds the frequency, a justification comment per BIRM is required.
+                                                </td>
+                                            </tr>
+        
+                                            <!-- Inspection comments -->
+                                            <tr>
+                                                <th scope="col" colspan="2" style="border-top: solid; border-bottom: solid;">GENERAL INSPECTION COMMENTS</th>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <br>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+
+                        </td>
+                    </tr>
+                </table>
+
+                <br>
+
+                <!-- DECK COMPONENTS SECTION -->
+                <table class="table-main" id="deck_table" style="text-align: center;">
+                    <tr>
+                        <th scope="col" colspan="6" style="border-bottom: solid;">
+                            ***DECK COMPONENTS***
+                        </th>
+                    </tr>
+
+                    <!-- Column names -->
+                    <tr>
+                        <th scope="col">
+                            SPAN TYPE-#
+                        </th>
+                        <th scope="col">
+                            DEFECT
+                        </th>
+                        <th scope="col">
+                            LOCATION
+                        </th>
+                        <th scope="col">
+                            CONDITION
+                        </th>
+                        <th scope="col">
+                            MEASUREMENT
+                        </th>
+                        <th scope="col">
+                            COMMENTS
+                        </th>
+                    </tr>
+
+                    <!-- Generated rows are inserted here -->
+
+                </table>
+
+                <br>
+
+                <!-- CGRaDI and ASI -->
+                <table class="table-main" id="CGR_table" style="text-align: center;">
+                    <tr>
+                        <th scope="col" colspan="3" style="border-bottom: solid;">
+                            ***COMPUTER GENERATED RATINGS AND DEFICIENCY ITEMS***
+                        </th>
+
+                        <th scope="col" colspan="3" style="border-bottom: solid;">
+                            ***ADVANCED SIGN INFORMATION***
+                        </th>
+                    </tr>
+
+                    <!-- Column names -->
+                    <tr>
+                        <th scope="col">
+                            Rated Item
+                        </th>
+                        <th scope="col">
+                            Rating
+                        </th>
+                        <th scope="col">
+                            Rating Date
+                        </th>
+                        <th scope="col">
+                            Sign #
+                        </th>
+                        <th scope="col">
+                            Sign Type
+                        </th>
+                        <th scope="col">
+                            Rating Date
+                        </th>
+                    </tr>
+
+                    <!-- Generated rows are inserted here -->
+
+                </table>
+            </div>
+
+        </div>
+
 
         <!-- Link script at the end so elements can be accessed through script properly -->
         <script src="script.js"></script>
