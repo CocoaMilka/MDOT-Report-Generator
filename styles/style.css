@@ -66,6 +66,7 @@ tr {
 
 .table-main td {
     border-collapse: collapse;
+    text-align: center;
 }
 
 .table-main tr {
@@ -86,6 +87,13 @@ tr {
 
 th[scope='col'] {
     text-align: center;
+}
+
+th[scope='colgroup'] {
+    text-align: center;
+    text-decoration: underline;
+    font-style: italic;
+    white-space: nowrap;
 }
 
 th[scope='row'] {
