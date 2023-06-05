@@ -19,6 +19,20 @@ fileInput.addEventListener("change", () => {
 
 function parseData(data)
 {
+    Substructure_table = document.getElementById("SUBSTRUCTURE_Table");
+
+    newRow = Substructure_table.insertRow(-1);
+    newCell = newRow.insertCell(0);
+    newCell.outerHTML = "<th>INSPECTOR " + i + ":</th>";
+
+    for (var i in data.subFields)
+    {
+        console.log(data.subFields[i].name);
+    }
+}
+
+function parseData_OLD(data)
+{
     //Grab tables to write to
     BII_Table = document.getElementById("BII_table");
     Deck_Table = document.getElementById("deck_table");

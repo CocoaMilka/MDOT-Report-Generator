@@ -1,0 +1,177 @@
+{
+    "name": "MoDOT Inspection Form",
+    "subClassId": 1,
+    "subFields": [
+      {
+        "__type": "DataFieldCategory:#",
+        "name": "General Structure Information​",
+        "subClassId": 1,
+        "subFields": [
+          {
+            "__type": "DataFieldCategory:#",
+            "name": "Route​",
+            "subClassId": 1,
+            "subFields": [
+              {
+                "__type": "DataFieldText:#",
+                "name": "null​",
+                "subClassId": 3
+              }
+            ]
+          },
+          {
+            "__type": "DataFieldCategory:#",
+            "name": "#Spans​",
+            "subClassId": 1,
+            "subFields": [
+              {
+                "__type": "DataFieldText:#",
+                "name": "null​",
+                "subClassId": 3
+              }
+            ]
+          },
+          {
+            "__type": "DataFieldCategory:#",
+            "name": "Place Code​",
+            "subClassId": 1,
+            "subFields": [
+              {
+                "__type": "DataFieldText:#",
+                "name": "null​",
+                "subClassId": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "__type": "DataFieldCategory:#",
+        "name": "Bridge Inspection Information​",
+        "subClassId": 1,
+        "subFields": [
+          {
+            "__type": "DataFieldCategory:#",
+            "name": "Date​",
+            "subClassId": 1,
+            "subFields": []
+          },
+          {
+            "__type": "DataFieldCategory:#",
+            "name": "Responsibility​",
+            "subClassId": 1,
+            "subFields": []
+          },
+          {
+            "__type": "DataFieldCategory:#",
+            "name": "Inspectors​",
+            "subClassId": 1,
+            "subFields": []
+          }
+        ]
+      },
+      {
+        "__type": "DataFieldCategory:#",
+        "name": "Substructure Components​",
+        "subClassId": 1,
+        "subFields": [
+          {
+            "__type": "DataFieldCategory:#",
+            "name": "Component 1​",
+            "subClassId": 1,
+            "subFields": [
+              {
+                "__type": "DataFieldText:#",
+                "name": "Component Name​",
+                "subClassId": 3
+              },
+              {
+                "__type": "DataFieldCategory:#",
+                "name": "Associated Component​",
+                "subClassId": 1,
+                "subFields": [
+                  {
+                    "__type": "DataFieldText:#",
+                    "name": "Component Name​",
+                    "subClassId": 3
+                  },
+                  {
+                    "__type": "DataFieldCategory:#",
+                    "name": "Condition​",
+                    "subClassId": 1,
+                    "subFields": []
+                  },
+                  {
+                    "__type": "DataFieldCategory:#",
+                    "name": "Location 1​",
+                    "subClassId": 1,
+                    "subFields": []
+                  },
+                  {
+                    "__type": "DataFieldCategory:#",
+                    "name": "Location 2​",
+                    "subClassId": 1,
+                    "subFields": []
+                  },
+                  {
+                    "__type": "DataFieldCategory:#",
+                    "name": "Severity​",
+                    "subClassId": 1,
+                    "subFields": []
+                  },
+                  {
+                    "__type": "DataFieldCategory:#",
+                    "name": "Measurement​",
+                    "subClassId": 1,
+                    "subFields": []
+                  },
+                  {
+                    "__type": "DataFieldCategory:#",
+                    "name": "Comment​",
+                    "subClassId": 1,
+                    "subFields": []
+                  }
+                ]
+              },
+              {
+                "__type": "DataFieldCategory:#",
+                "name": "Skew​",
+                "subClassId": 1,
+                "subFields": []
+              },
+              {
+                "__type": "DataFieldCategory:#",
+                "name": "Length​",
+                "subClassId": 1,
+                "subFields": []
+              },
+              {
+                "__type": "DataFieldCategory:#",
+                "name": "Material​",
+                "subClassId": 1,
+                "subFields": []
+              },
+              {
+                "__type": "DataFieldCategory:#",
+                "name": "Construction​",
+                "subClassId": 1,
+                "subFields": []
+              },
+              {
+                "__type": "DataFieldCategory:#",
+                "name": "Label​",
+                "subClassId": 1,
+                "subFields": []
+              },
+              {
+                "__type": "DataFieldCategory:#",
+                "name": "Comments​",
+                "subClassId": 1,
+                "subFields": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

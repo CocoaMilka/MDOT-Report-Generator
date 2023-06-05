@@ -965,52 +965,58 @@
                     </tr>
 
                     <!-- SUBSTRUCTURE TABLE -->
-                    <tr style="border-bottom: solid; border-top: solid"><th scope="col" colspan="9">***SUBSTRUCTURE COMPONENTS***</th></tr>
-
                     <tr>
-                        <th scope="colgroup">SUBSTRUCTURE</th>
-                        <th scope="colgroup">SKEW</th>
-                        <th scope="colgroup">LENGTH</th>
-                        <th scope="colgroup">MATERIAL</th>
-                        <th scope="colgroup">CONSTRUCTION</th>
-                        <th scope="colgroup">LABEL</th>
-                        <th scope="colgroup">COMMENTS</th>
-                    </tr>
-
-                    <!-- Populate column attribute values from json -->
-                    <tr>
-                        <td>Abutment-1</td>
-                        <td>data</td>
-                        <td>Steel</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                    </tr>
-
-                    <tr>
-                        <th scope="colgroup" colspan="3">CONDITION</th>
-                        <th scope="colgroup">LOCATION 1</th>
-                        <th scope="colgroup">LOCATION 2</th>
-                        <th scope="colgroup">SEVERITY</th>
-                        <th scope="colgroup">MEASUREMENT</th>
-                        <th scope="colgroup">COMMENT</th>
-                    </tr>
-
-                    <tr>
-                        <td colspan="3">data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
+                        <td colspan="9">
+                            <table class="table-nested" id="SUBSTRUCTURE_Table">
+                                <tr style="border-bottom: solid; border-top: solid"><th scope="col" colspan="9">***SUBSTRUCTURE COMPONENTS***</th></tr>
+                                
+                                <tr>
+                                    <th scope="colgroup">SUBSTRUCTURE</th>
+                                    <th scope="colgroup">SKEW</th>
+                                    <th scope="colgroup">LENGTH</th>
+                                    <th scope="colgroup">MATERIAL</th>
+                                    <th scope="colgroup">CONSTRUCTION</th>
+                                    <th scope="colgroup">LABEL</th>
+                                    <th scope="colgroup">COMMENTS</th>
+                                </tr>
+            
+                                <!-- Populate column attribute values from json -->
+                                <tr>
+                                    <td>Abutment-1</td>
+                                    <td>data</td>
+                                    <td>Steel</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                </tr>
+            
+                                <tr>
+                                    <th scope="colgroup" colspan="3">CONDITION</th>
+                                    <th scope="colgroup">LOCATION 1</th>
+                                    <th scope="colgroup">LOCATION 2</th>
+                                    <th scope="colgroup">SEVERITY</th>
+                                    <th scope="colgroup">MEASUREMENT</th>
+                                    <th scope="colgroup">COMMENT</th>
+                                </tr>
+            
+                                <tr>
+                                    <td colspan="3">data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                    <td>data</td>
+                                </tr>
+                            </table>
+                        </td>
                     </tr>
 
                     <!-- Nested tables will be inserted here, data follows a tree structure -->
 
                     <tr id="superstructure-component-table">
                         <td colspan="9">
-                            <table class="table-nested">
+                            <table class="table-nested" style="background-color: bisque;">
                                 <tr>
                                     <th scope="colgroup">ASSOCIATED COMPONENT</th>
                                     <th scope="colgroup">MATERIAL</th>
@@ -1119,7 +1125,7 @@
                 <br>
                 <!-- STRUCTURE PAINT INFORMATION -->
                 <table class="table-main">
-                    <tr style="border-bottom: solid;"><th scope="col">***STRUCTURE PAINT INFORMATION***</th></tr>
+                    <tr style="border-bottom: solid;"><th scope="col" colspan="3">***STRUCTURE PAINT INFORMATION***</th></tr>
 
                     <tr>
                         <th scope="col">CONDITION:</th>
