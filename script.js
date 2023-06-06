@@ -12,23 +12,59 @@ fileInput.addEventListener("change", () => {
     inputReader.addEventListener("load", () => {
         data = JSON.parse(inputReader.result);
 
-        parseData(data);
+        grabSections(data);
     })
 })
 
 
-function parseData(data)
+function grabSections(data)
 {
     Substructure_table = document.getElementById("SUBSTRUCTURE_Table");
 
-    newRow = Substructure_table.insertRow(-1);
-    newCell = newRow.insertCell(0);
-    newCell.outerHTML = "<th>INSPECTOR " + i + ":</th>";
+    // Grabs root level attributes (Table titles in form)
 
-    for (var i in data.subFields)
+    var GSI = data.subFields[0];
+    var BII = data.subFields[1];
+    var SC = data.subFields[2];
+
+    //Substructure
+
+    // Grabs each component per substructure
+    for (var i = 0; i < SC.subFields.length; i++)
     {
-        console.log(data.subFields[i].name);
+        newRow = Substructure_table.insertRow(-1);
+        // Grabs each substructure
+        for (var j = 0; j < SC.subFields[i].subFields.length; j++)
+        {
+            if (SC.subFields[i].subFields[j].subClassId == 3)
+            {
+                // Grabs name of substructure
+                newCell = newRow.insertCell(-1);
+                newCell.outerHTML = "<td>" + SC.subFields[i].subFields[j].name + "</td>";
+                console.log(SC.subFields[i].subFields[j].name);
+            }
+            else
+            {
+                if (SC.subFields[i].subFields[j].subFields[0] !== undefined)
+                {
+                    newCell = newRow.insertCell(-1);
+                    newCell.outerHTML = "<td>" + SC.subFields[i].subFields[j].subFields[0].name + "</td>";
+                    console.log(SC.subFields[i].subFields[j].subFields[0].name);
+                }
+                else
+                {
+                    newCell = newRow.insertCell(-1);
+                    newCell.outerHTML = "<td>" + "null" + "</td>";
+                    console.log("null");
+                }
+            }
+        }
     }
+}
+
+function parseSubstructure()
+{
+
 }
 
 function parseData_OLD(data)
@@ -36,7 +72,7 @@ function parseData_OLD(data)
     //Grab tables to write to
     BII_Table = document.getElementById("BII_table");
     Deck_Table = document.getElementById("deck_table");
-    CGR_Table = document.getElementById("CGR_table")
+    CGR_Table = document.getElementById("CGR_table");
 
     let defects = data["subFields"][0].subFields;
     let inspectors = data.subFields[1].subFields[1].subFields;

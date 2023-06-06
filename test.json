@@ -1,0 +1,69 @@
+[
+    {
+        "Table": "General Structure Information",
+        "Route": "Route data",
+        "Feature": "Feature data",
+        "Status": "Status data",
+        "#Spans": 5
+    },
+    {
+        "Table": "Bridge Inspection Information",
+        "Date": "6/6/2023",
+        "Responsibility": "Routine inspection",
+        "Frequency": "Yearly",
+        "Inspectors":
+        [
+            "Eliot Kimmel",
+            "Joshua Ghilino"
+        ]
+    },
+    {
+        "Table": "Substructure Components",
+        "Components":
+        [
+            {
+                "Substructure": "Abutment",
+                "Skew": "Skew data",
+                "Length": "50in",
+                "Material": "Steel",
+                "Construction": "data",
+                "Label": "data",
+                "Comment": "Inspection comment blah blah etc",
+                "Associated Component":
+                [
+                    {
+                        "Component": "Pier",
+                        "Conditions":
+                        [
+                            {
+                                "Condition": "Spalling",
+                                "Location": "Bottom",
+                                "Severity": "Fine"
+                            },
+                            {
+                                "Condition": "Vertical Cracks",
+                                "Location": "Top",
+                                "Severity": "Severe"
+                            }
+                        ],
+                        "Measurement": ".47in",
+                        "Comment": "Yep that's a Pier"
+                    },
+                    {
+                        "Component": "Pile",
+                        "Conditions":
+                        [
+                            {
+                                "Condition": "Spalling",
+                                "Location": "Bottom",
+                                "Severity": "Fine"
+                            }
+                        ],
+                        "Measurement": ".89in",
+                        "Comment": "This is a Pile comment"
+                    }
+                ]
+            }
+        ]
+    }
+]
