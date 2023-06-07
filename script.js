@@ -33,6 +33,7 @@ function grabSections(data)
     for (var i = 0; i < SC.subFields.length; i++)
     {
         newRow = Substructure_table.insertRow(-1);
+
         // Grabs each substructure
         for (var j = 0; j < SC.subFields[i].subFields.length; j++)
         {
@@ -41,23 +42,40 @@ function grabSections(data)
                 // Grabs name of substructure
                 newCell = newRow.insertCell(-1);
                 newCell.outerHTML = "<td>" + SC.subFields[i].subFields[j].name + "</td>";
-                console.log(SC.subFields[i].subFields[j].name);
+                //console.log(SC.subFields[i].subFields[j].name);
             }
             else
             {
+                // Grabs attributes of substructure
                 if (SC.subFields[i].subFields[j].subFields[0] !== undefined)
                 {
                     newCell = newRow.insertCell(-1);
                     newCell.outerHTML = "<td>" + SC.subFields[i].subFields[j].subFields[0].name + "</td>";
-                    console.log(SC.subFields[i].subFields[j].subFields[0].name);
+                    //console.log(SC.subFields[i].subFields[j].subFields[0].name);
                 }
                 else
                 {
                     newCell = newRow.insertCell(-1);
                     newCell.outerHTML = "<td>" + "null" + "</td>";
-                    console.log("null");
+                    //console.log("null");
                 }
             }
+        }
+
+        newRow = Substructure_table.insertRow(-1);
+        // Create Associated component table
+        for (var k = 0; k < SC.subFields[i].subFields[1].subFields.length; k++)
+        {
+            // Each iteration grabs an attribute of an associated component
+            //console.log("break: ");
+            //console.log(SC.subFields[i].subFields[1].subFields[k]);
+
+            var tmp = SC.subFields[i].subFields[1].subFields[k];
+            while (tmp.subFields !== undefined)
+            {
+                tmp = tmp.subFields;
+            }
+            console.log(tmp);
         }
     }
 }
