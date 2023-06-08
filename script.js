@@ -32,8 +32,8 @@ function grabSections(data)
 
     for (var i = 0; i < components.length; i++)
     {
-        // each iteration represents a component
-        // returns an array of objects containing each component attribtue for each component i
+        // each iteration represents a Substructure
+        // returns an array of objects containing each substructure attribtue for each substructure i
         var component = getLeaf(components[i]);
         //console.log(component);
 
@@ -62,6 +62,13 @@ function grabSections(data)
                 //console.log(component_attribute[0].name);
             }
         }
+
+        // Returns component object
+        console.log(component[1]);
+
+        newRow = Substructure_table.insertRow(-1);
+        newCell = newRow.insertCell(0);
+        newCell.outerHTML = create_Component_table(component[1].subFields[0].name);
     }
 }
 
@@ -74,6 +81,30 @@ function getLeaf(root)
     }
 
     return tmp;
+}
+
+// Creates a template table to insert components
+function create_Component_table(tableID)
+{
+    var html = "";
+
+    html += "<tr>" +
+        "<td colspan=\"9\">" +
+            "<table class=\"table-nested\" id=\"" + tableID + "\">" +
+                "<tr>" +
+                    "<th scope=\"colgroup\">ASSOCIATED COMPONENT</th>" +
+                    "<th scope=\"colgroup\">CONDITION</th>" +
+                    "<th scope=\"colgroup\">LOCATION 1</th>" +
+                    "<th scope=\"colgroup\">LOCATION 2</th>" +
+                    "<th scope=\"colgroup\">SEVERITY</th>" +
+                    "<th scope=\"colgroup\">MEASUREMENT</th>" +
+                    "<th scope=\"colgroup\">COMMENT</th>" +
+                "</tr>" +
+            "</table>" +
+        "</td>" +
+    "</tr>";
+
+    return html;
 }
 
 function parseData_OLD(data)
