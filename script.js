@@ -43,14 +43,14 @@ function grabSections(data)
         //console.log(component[0].name);
 
         
-        //Grabs each component attribute value, why is everyting an object? smh my head
+        // Grabs each component attribute value, why is everyting an object? smh my head
+        // This will populate substructure rows
         for (var j = 2; j < component.length; j++)
         {
             var component_attribute = getLeaf(component[j]);
 
             if (component_attribute.length == 0)
             {
-                component_attribute = "null";
                 newCell = newRow.insertCell(-1);
                 newCell.outerHTML = "<td>null</td>";
                 //console.log("null");
@@ -63,12 +63,28 @@ function grabSections(data)
             }
         }
 
-        // Returns component object
-        console.log(component[1]);
-
         newRow = Substructure_table.insertRow(-1);
         newCell = newRow.insertCell(0);
-        newCell.outerHTML = create_Component_table(component[1].subFields[0].name);
+        newCell.outerHTML = create_Component_table(component[1].subFields[0].name, i);
+
+        // This will populate associated component table for each substructure component
+        var tableID = component[1].subFields[0].name + i;
+        var current_table = document.getElementById(tableID.toString());
+        newRow = current_table.insertRow(-1);
+
+        for (var k = 0; k < 7; k++)
+        {
+            var current_attribute = getLeaf(component[1])[k];
+            console.log(current_attribute);
+
+            if (current_attribute.length == 0)
+            {
+
+            }
+
+            newCell = newRow.insertCell(-1);
+            newCell.outerHTML = "<td>" + current_attribute.name + "</td>";
+        }
     }
 }
 
@@ -84,13 +100,14 @@ function getLeaf(root)
 }
 
 // Creates a template table to insert components
-function create_Component_table(tableID)
+// the table ID is made up of the component name + order number to create a unique key for populating elements
+function create_Component_table(tableID, identifier)
 {
     var html = "";
 
     html += "<tr>" +
         "<td colspan=\"9\">" +
-            "<table class=\"table-nested\" id=\"" + tableID + "\">" +
+            "<table class=\"table-nested\" id=\"" + tableID + identifier + "\" style=\"background-color: lightblue;\">" +
                 "<tr>" +
                     "<th scope=\"colgroup\">ASSOCIATED COMPONENT</th>" +
                     "<th scope=\"colgroup\">CONDITION</th>" +
