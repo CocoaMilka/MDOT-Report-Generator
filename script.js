@@ -27,62 +27,53 @@ function grabSections(data)
     var BII = data.subFields[1];
     var SC = data.subFields[2];
 
-    //Substructure
+    // Array of substructure components 
+    var components = getLeaf(SC);
 
-    // Grabs each component per substructure
-    for (var i = 0; i < SC.subFields.length; i++)
+    for (var i = 0; i < components.length; i++)
     {
-        newRow = Substructure_table.insertRow(-1);
+        // each iteration represents a component
+        // returns an array of objects containing each component attribtue for each component i
+        var component = getLeaf(components[i]);
+        //console.log(component);
 
-        // Grabs each substructure
-        for (var j = 0; j < SC.subFields[i].subFields.length; j++)
+        newRow = Substructure_table.insertRow(-1);
+        newCell = newRow.insertCell(-1);
+        newCell.outerHTML = "<th>" + component[0].name + "</th>";
+        //console.log(component[0].name);
+
+        
+        //Grabs each component attribute value, why is everyting an object? smh my head
+        for (var j = 2; j < component.length; j++)
         {
-            if (SC.subFields[i].subFields[j].subClassId == 3)
+            var component_attribute = getLeaf(component[j]);
+
+            if (component_attribute.length == 0)
             {
-                // Grabs name of substructure
+                component_attribute = "null";
                 newCell = newRow.insertCell(-1);
-                newCell.outerHTML = "<td>" + SC.subFields[i].subFields[j].name + "</td>";
-                //console.log(SC.subFields[i].subFields[j].name);
+                newCell.outerHTML = "<td>null</td>";
+                //console.log("null");
             }
             else
             {
-                // Grabs attributes of substructure
-                if (SC.subFields[i].subFields[j].subFields[0] !== undefined)
-                {
-                    newCell = newRow.insertCell(-1);
-                    newCell.outerHTML = "<td>" + SC.subFields[i].subFields[j].subFields[0].name + "</td>";
-                    //console.log(SC.subFields[i].subFields[j].subFields[0].name);
-                }
-                else
-                {
-                    newCell = newRow.insertCell(-1);
-                    newCell.outerHTML = "<td>" + "null" + "</td>";
-                    //console.log("null");
-                }
+                newCell = newRow.insertCell(-1);
+                newCell.outerHTML = "<td>" + component_attribute[0].name + "</td>";
+                //console.log(component_attribute[0].name);
             }
-        }
-
-        newRow = Substructure_table.insertRow(-1);
-        // Create Associated component table
-        for (var k = 0; k < SC.subFields[i].subFields[1].subFields.length; k++)
-        {
-            // Each iteration grabs an attribute of an associated component
-            //console.log("break: ");
-            //console.log(SC.subFields[i].subFields[1].subFields[k]);
-
-            var tmp = SC.subFields[i].subFields[1].subFields[k];
-            while (tmp.subFields !== undefined)
-            {
-                tmp = tmp.subFields;
-            }
-            console.log(tmp);
         }
     }
 }
 
-function parseSubstructure()
+function getLeaf(root)
 {
+    var tmp = root;
+    while (tmp.subFields !== undefined)
+    {
+        tmp = tmp.subFields;
+    }
 
+    return tmp;
 }
 
 function parseData_OLD(data)
