@@ -442,7 +442,7 @@
                 "subFields": [
                   {
                     "__type": "DataFieldText:#",
-                    "name": "Steel​",
+                    "name": "Reinforced Concrete",
                     "subClassId": 3
                   }
                 ]

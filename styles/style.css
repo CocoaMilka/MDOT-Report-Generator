@@ -101,6 +101,16 @@ th[scope='row'] {
     text-align: right;
 }
 
+.table-component {
+    background-color: lightblue;
+    table-layout: fixed;
+    width: fit-content;
+}
+
+.table-component:hover {
+    background-color: beige;
+}
+
 @media print {
     .noPrint{
       display:none;

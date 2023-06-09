@@ -76,6 +76,7 @@ function grabSections(data)
 
         for (var k = 0; k < 7; k++)
         {
+            // Substructures have multiple components
             var current_attribute = getLeaf(component[1])[k];
             //console.log(current_attribute);
 
@@ -94,11 +95,18 @@ function grabSections(data)
                 // Lists all values for multi valued attributes
                 for (var l = 0; l < attributes.length; l++)
                 {
-                    console.log(attributes[l].name);
+                    //console.log(attributes[l].name);
+
+                    var data = attributes[l].name;
+
+                    if (attributes[l].measurements !== undefined)
+                    {
+                        data = attributes[l].measurements[0].length;
+                    }
 
                     newAttributeRow = attribute_table.insertRow(-1);
                     newAttributeCell = newAttributeRow.insertCell(-1);
-                    newAttributeCell.outerHTML = "<td>" + attributes[l].name + "</td>";
+                    newAttributeCell.outerHTML = "<td>" + data + "</td>";
                 }
                 
             }
@@ -130,7 +138,7 @@ function create_Component_table(tableID, identifier)
 
     html += "<tr>" +
         "<td colspan=\"9\">" +
-            "<table class=\"table-nested\" id=\"" + tableID + identifier + "\" style=\"background-color: lightblue;\">" +
+            "<table class=\"table-component\" id=\"" + tableID + identifier + "\">" +
                 "<tr>" +
                     "<th scope=\"colgroup\">ASSOCIATED COMPONENT</th>" +
                     "<th scope=\"colgroup\">CONDITION</th>" +
