@@ -67,6 +67,8 @@ function grabSections(data)
         newCell = newRow.insertCell(0);
         newCell.outerHTML = create_Component_table(component[1].subFields[0].name, i);
 
+
+
         // This will populate associated component table for each substructure component
         var tableID = component[1].subFields[0].name + i;
         var current_table = document.getElementById(tableID.toString());
@@ -75,15 +77,36 @@ function grabSections(data)
         for (var k = 0; k < 7; k++)
         {
             var current_attribute = getLeaf(component[1])[k];
-            console.log(current_attribute);
+            //console.log(current_attribute);
 
-            if (current_attribute.length == 0)
+            if (current_attribute.subFields !== undefined)
             {
+                var attributes = current_attribute.subFields;
 
+
+                // create table then add attributes
+                newAttributeCell = newRow.insertCell(-1);
+                newAttributeCell.outerHTML = create_attribute_table(current_attribute.name, i, k);
+
+                var attributeTableID = current_attribute.name + i + k;
+                var attribute_table = document.getElementById(attributeTableID.toString());
+
+                // Lists all values for multi valued attributes
+                for (var l = 0; l < attributes.length; l++)
+                {
+                    console.log(attributes[l].name);
+
+                    newAttributeRow = attribute_table.insertRow(-1);
+                    newAttributeCell = newAttributeRow.insertCell(-1);
+                    newAttributeCell.outerHTML = "<td>" + attributes[l].name + "</td>";
+                }
+                
             }
-
-            newCell = newRow.insertCell(-1);
-            newCell.outerHTML = "<td>" + current_attribute.name + "</td>";
+            else
+            {
+                newCell = newRow.insertCell(-1);
+                newCell.outerHTML = "<td>" + current_attribute.name + "</td>";
+            }
         }
     }
 }
@@ -120,6 +143,18 @@ function create_Component_table(tableID, identifier)
             "</table>" +
         "</td>" +
     "</tr>";
+
+    return html;
+}
+
+function create_attribute_table(tableID, identifier1, identifier2)
+{
+    var html = "";
+
+    html += "<td>" +
+        "<table class=\"table-nested\" id=\"" + tableID + identifier1 + identifier2 + "\">" +
+        "</table>" +
+    "</td>";
 
     return html;
 }
