@@ -27,27 +27,27 @@ function grabSections(data)
     var BII = data.subFields[1];
     var SC = data.subFields[2];
 
-    // Array of substructure components 
-    var components = getLeaf(SC);
+    // Array of substructures 
+    var substructures = getLeaf(SC);
 
-    for (var i = 0; i < components.length; i++)
+    for (var i = 0; i < substructures.length; i++)
     {
         // each iteration represents a Substructure
         // returns an array of objects containing each substructure attribtue for each substructure i
-        var component = getLeaf(components[i]);
-        //console.log(component);
+        var substructure = getLeaf(substructures[i]);
+        //console.log(getLeaf(substructure[1]));
 
         newRow = Substructure_table.insertRow(-1);
         newCell = newRow.insertCell(-1);
-        newCell.outerHTML = "<th>" + component[0].name + "</th>";
+        newCell.outerHTML = "<th>" + substructure[0].name + "</th>";
         //console.log(component[0].name);
 
         
-        // Grabs each component attribute value, why is everyting an object? smh my head
+        // Grabs each substructure attribute value, why is everyting an object? smh my head
         // This will populate substructure rows
-        for (var j = 2; j < component.length; j++)
+        for (var j = 2; j < substructure.length; j++)
         {
-            var component_attribute = getLeaf(component[j]);
+            var component_attribute = getLeaf(substructure[j]);
 
             if (component_attribute.length == 0)
             {
@@ -63,58 +63,69 @@ function grabSections(data)
             }
         }
 
+        // Associated component row per substructure
         newRow = Substructure_table.insertRow(-1);
         newCell = newRow.insertCell(0);
-        newCell.outerHTML = create_Component_table(component[1].subFields[0].name, i);
-
-
+        newCell.outerHTML = create_Component_table(substructure[1].subFields[0].name, i);
 
         // This will populate associated component table for each substructure component
-        var tableID = component[1].subFields[0].name + i;
+        var tableID = substructure[1].subFields[0].name + i;
         var current_table = document.getElementById(tableID.toString());
-        newRow = current_table.insertRow(-1);
+        
 
-        for (var k = 0; k < 7; k++)
+        var components = getLeaf(substructure[1]);
+
+        for (var k = 0; k < components.length; k++)
         {
             // Substructures have multiple components
-            var current_attribute = getLeaf(component[1])[k];
-            //console.log(current_attribute);
+            // Grabs each component array containing their attributes
+            var component = getLeaf(components[k]);
+            //console.log(current_component);
 
-            if (current_attribute.subFields !== undefined)
+            // Populate table with attributes
+            newRow = current_table.insertRow(-1);
+            for (var n = 0; n < component.length; n++)
             {
-                var attributes = current_attribute.subFields;
+                var current_component = component[n];
+                console.log(current_component);
 
-
-                // create table then add attributes
-                newAttributeCell = newRow.insertCell(-1);
-                newAttributeCell.outerHTML = create_attribute_table(current_attribute.name, i, k);
-
-                var attributeTableID = current_attribute.name + i + k;
-                var attribute_table = document.getElementById(attributeTableID.toString());
-
-                // Lists all values for multi valued attributes
-                for (var l = 0; l < attributes.length; l++)
+                if (current_component.subFields !== undefined)
                 {
-                    //console.log(attributes[l].name);
-
-                    var data = attributes[l].name;
-
-                    if (attributes[l].measurements !== undefined)
+                    var attributes = getLeaf(current_component);
+                    console.log(n);
+    
+                    // create table then add attributes
+                    newAttributeCell = newRow.insertCell(-1);
+                    newAttributeCell.outerHTML = create_attribute_table(current_component.name, i, k);
+    
+                    var attributeTableID = current_component.name + i + k;
+                    var attribute_table = document.getElementById(attributeTableID.toString());
+    
+                    // Lists all values for multi valued attributes
+                    for (var l = 0; l < attributes.length; l++)
                     {
-                        data = attributes[l].measurements[0].length;
+                        //console.log(attributes[l].name);
+    
+                        var data = attributes[l].name;
+    
+                        if (attributes[l].measurements !== undefined)
+                        {
+                            data = attributes[l].measurements[0].length;
+                        }
+    
+                        newAttributeRow = attribute_table.insertRow(-1);
+                        newAttributeCell = newAttributeRow.insertCell(-1);
+                        newAttributeCell.outerHTML = "<td>" + data + "</td>";
                     }
-
-                    newAttributeRow = attribute_table.insertRow(-1);
-                    newAttributeCell = newAttributeRow.insertCell(-1);
-                    newAttributeCell.outerHTML = "<td>" + data + "</td>";
+                    
                 }
-                
+                else
+                {
+                    newCell = newRow.insertCell(-1);
+                    newCell.outerHTML = "<td>" + current_component.name + "</td>";
+                }
             }
-            else
-            {
-                newCell = newRow.insertCell(-1);
-                newCell.outerHTML = "<td>" + current_attribute.name + "</td>";
-            }
+
         }
     }
 }
@@ -160,7 +171,7 @@ function create_attribute_table(tableID, identifier1, identifier2)
     var html = "";
 
     html += "<td>" +
-        "<table class=\"table-nested\" id=\"" + tableID + identifier1 + identifier2 + "\">" +
+        "<table class =\"table-attribute\" id=\"" + tableID + identifier1 + identifier2 + "\">" +
         "</table>" +
     "</td>";
 

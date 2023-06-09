@@ -102,13 +102,17 @@ th[scope='row'] {
 }
 
 .table-component {
-    background-color: lightblue;
+    background-color: rgb(215, 245, 255);
     table-layout: fixed;
     width: fit-content;
 }
 
-.table-component:hover {
+.table-component tr:hover {
     background-color: beige;
+}
+
+.table-attribute tr tr:hover tr:nth-child(even) {
+    background-color: transparent;
 }
 
 @media print {
