@@ -111,10 +111,6 @@ th[scope='row'] {
     background-color: beige;
 }
 
-.table-attribute tr tr:hover tr:nth-child(even) {
-    background-color: transparent;
-}
-
 @media print {
     .noPrint{
       display:none;

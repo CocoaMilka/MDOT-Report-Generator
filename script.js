@@ -171,7 +171,7 @@ function create_attribute_table(tableID, identifier1, identifier2)
     var html = "";
 
     html += "<td>" +
-        "<table class =\"table-attribute\" id=\"" + tableID + identifier1 + identifier2 + "\">" +
+        "<table class =\"table-nested\" id=\"" + tableID + identifier1 + identifier2 + "\">" +
         "</table>" +
     "</td>";
 
