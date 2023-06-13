@@ -30,8 +30,6 @@ function grabSections(data)
     // Array of substructures 
     var substructures = getLeaf(SC);
 
-    // comment
-
     for (var i = 0; i < substructures.length; i++)
     {
         // each iteration represents a Substructure

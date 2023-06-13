@@ -105,7 +105,7 @@
                     "subFields": [
                         {
                             "__type": "DataFieldText:#",
-                            "name": "Abutment-1​",
+                            "name": "​",
                             "subClassId": 3
                         },
                         {
@@ -120,7 +120,7 @@
                                     "subFields": [
                                         {
                                             "__type": "DataFieldText:#",
-                                            "name": "Pier​",
+                                            "name": "",
                                             "subClassId": 3
                                         },
                                         {
@@ -128,16 +128,6 @@
                                             "name": "Condition​",
                                             "subClassId": 1,
                                             "subFields": [
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Spalls​",
-                                                    "subClassId": 3
-                                                },
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Vertical Cracks​",
-                                                    "subClassId": 3
-                                                }
                                             ]
                                         },
                                         {
@@ -145,16 +135,6 @@
                                             "name": "Location 1​",
                                             "subClassId": 1,
                                             "subFields": [
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Bottom​",
-                                                    "subClassId": 3
-                                                },
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Cap Face​",
-                                                    "subClassId": 3
-                                                }
                                             ]
                                         },
                                         {
@@ -168,16 +148,6 @@
                                             "name": "Severity​",
                                             "subClassId": 1,
                                             "subFields": [
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Small​",
-                                                    "subClassId": 3
-                                                },
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Fine​",
-                                                    "subClassId": 3
-                                                }
                                             ]
                                         },
                                         {
@@ -185,40 +155,6 @@
                                             "name": "Measurement​",
                                             "subClassId": 1,
                                             "subFields": [
-                                                {
-                                                    "__type": "DataFieldMeasurement:#",
-                                                    "name": "NEW MEASUREMENT",
-                                                    "subClassId": 2,
-                                                    "measurements": [
-                                                        {
-                                                            "__type": "SerializeMeasure_LineSeg:#",
-                                                            "measureType": 0,
-                                                            "length": 0.285521716,
-                                                            "vertices": [
-                                                                {
-                                                                    "x": -4.15780735,
-                                                                    "y": 0.510817051,
-                                                                    "z": 0.336550027
-                                                                },
-                                                                {
-                                                                    "x": -4.12571335,
-                                                                    "y": 0.227104858,
-                                                                    "z": 0.336550057
-                                                                },
-                                                                {
-                                                                    "x": -4.087412,
-                                                                    "y": 0.01269989,
-                                                                    "z": 0.5760201
-                                                                },
-                                                                {
-                                                                    "x": -4.04520273,
-                                                                    "y": -0.0207209829,
-                                                                    "z": 0.6604003
-                                                                }
-                                                            ]
-                                                        }
-                                                    ]
-                                                }
                                             ]
                                         },
                                         {
@@ -226,11 +162,6 @@
                                             "name": "Comment​",
                                             "subClassId": 1,
                                             "subFields": [
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "This needs to be checked out or something lol​",
-                                                    "subClassId": 3
-                                                }
                                             ]
                                         }
                                     ]
@@ -250,16 +181,6 @@
                                             "name": "Condition​",
                                             "subClassId": 1,
                                             "subFields": [
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Patches",
-                                                    "subClassId": 3
-                                                },
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Map Cracks​",
-                                                    "subClassId": 3
-                                                }
                                             ]
                                         },
                                         {
@@ -267,16 +188,6 @@
                                             "name": "Location 1​",
                                             "subClassId": 1,
                                             "subFields": [
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Top",
-                                                    "subClassId": 3
-                                                },
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Cap Face​",
-                                                    "subClassId": 3
-                                                }
                                             ]
                                         },
                                         {
@@ -290,16 +201,6 @@
                                             "name": "Severity​",
                                             "subClassId": 1,
                                             "subFields": [
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Severe",
-                                                    "subClassId": 3
-                                                },
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Fine​",
-                                                    "subClassId": 3
-                                                }
                                             ]
                                         },
                                         {
@@ -307,40 +208,6 @@
                                             "name": "Measurement​",
                                             "subClassId": 1,
                                             "subFields": [
-                                                {
-                                                    "__type": "DataFieldMeasurement:#",
-                                                    "name": "NEW MEASUREMENT",
-                                                    "subClassId": 2,
-                                                    "measurements": [
-                                                        {
-                                                            "__type": "SerializeMeasure_LineSeg:#",
-                                                            "measureType": 0,
-                                                            "length": 0.285521716,
-                                                            "vertices": [
-                                                                {
-                                                                    "x": -4.15780735,
-                                                                    "y": 0.510817051,
-                                                                    "z": 0.336550027
-                                                                },
-                                                                {
-                                                                    "x": -4.12571335,
-                                                                    "y": 0.227104858,
-                                                                    "z": 0.336550057
-                                                                },
-                                                                {
-                                                                    "x": -4.087412,
-                                                                    "y": 0.01269989,
-                                                                    "z": 0.5760201
-                                                                },
-                                                                {
-                                                                    "x": -4.04520273,
-                                                                    "y": -0.0207209829,
-                                                                    "z": 0.6604003
-                                                                }
-                                                            ]
-                                                        }
-                                                    ]
-                                                }
                                             ]
                                         },
                                         {
@@ -348,11 +215,6 @@
                                             "name": "Comment​",
                                             "subClassId": 1,
                                             "subFields": [
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Another inspection comment",
-                                                    "subClassId": 3
-                                                }
                                             ]
                                         }
                                     ]
@@ -429,7 +291,7 @@
                     "subFields": [
                         {
                             "__type": "DataFieldText:#",
-                            "name": "Abutment-2​",
+                            "name": "​",
                             "subClassId": 3
                         },
                         {
@@ -444,7 +306,7 @@
                                     "subFields": [
                                         {
                                             "__type": "DataFieldText:#",
-                                            "name": "Pier​",
+                                            "name": "",
                                             "subClassId": 3
                                         },
                                         {
@@ -452,16 +314,6 @@
                                             "name": "Condition​",
                                             "subClassId": 1,
                                             "subFields": [
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Spalls​",
-                                                    "subClassId": 3
-                                                },
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Vertical Cracks​",
-                                                    "subClassId": 3
-                                                }
                                             ]
                                         },
                                         {
@@ -469,16 +321,6 @@
                                             "name": "Location 1​",
                                             "subClassId": 1,
                                             "subFields": [
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Bottom​",
-                                                    "subClassId": 3
-                                                },
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Cap Face​",
-                                                    "subClassId": 3
-                                                }
                                             ]
                                         },
                                         {
@@ -492,16 +334,6 @@
                                             "name": "Severity​",
                                             "subClassId": 1,
                                             "subFields": [
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Small​",
-                                                    "subClassId": 3
-                                                },
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Fine​",
-                                                    "subClassId": 3
-                                                }
                                             ]
                                         },
                                         {
@@ -509,40 +341,6 @@
                                             "name": "Measurement​",
                                             "subClassId": 1,
                                             "subFields": [
-                                                {
-                                                    "__type": "DataFieldMeasurement:#",
-                                                    "name": "NEW MEASUREMENT",
-                                                    "subClassId": 2,
-                                                    "measurements": [
-                                                        {
-                                                            "__type": "SerializeMeasure_LineSeg:#",
-                                                            "measureType": 0,
-                                                            "length": 0.285521716,
-                                                            "vertices": [
-                                                                {
-                                                                    "x": -4.15780735,
-                                                                    "y": 0.510817051,
-                                                                    "z": 0.336550027
-                                                                },
-                                                                {
-                                                                    "x": -4.12571335,
-                                                                    "y": 0.227104858,
-                                                                    "z": 0.336550057
-                                                                },
-                                                                {
-                                                                    "x": -4.087412,
-                                                                    "y": 0.01269989,
-                                                                    "z": 0.5760201
-                                                                },
-                                                                {
-                                                                    "x": -4.04520273,
-                                                                    "y": -0.0207209829,
-                                                                    "z": 0.6604003
-                                                                }
-                                                            ]
-                                                        }
-                                                    ]
-                                                }
                                             ]
                                         },
                                         {
@@ -550,11 +348,6 @@
                                             "name": "Comment​",
                                             "subClassId": 1,
                                             "subFields": [
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Inspection comment goes here too​",
-                                                    "subClassId": 3
-                                                }
                                             ]
                                         }
                                     ]
@@ -566,7 +359,7 @@
                                     "subFields": [
                                         {
                                             "__type": "DataFieldText:#",
-                                            "name": "Column",
+                                            "name": "",
                                             "subClassId": 3
                                         },
                                         {
@@ -574,21 +367,6 @@
                                             "name": "Condition​",
                                             "subClassId": 1,
                                             "subFields": [
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Delamination",
-                                                    "subClassId": 3
-                                                },
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Spalls​",
-                                                    "subClassId": 3
-                                                },
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Rebar Exposed",
-                                                    "subClassId": 3
-                                                }
                                             ]
                                         },
                                         {
@@ -596,21 +374,6 @@
                                             "name": "Location 1​",
                                             "subClassId": 1,
                                             "subFields": [
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Top",
-                                                    "subClassId": 3
-                                                },
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Cap Face​",
-                                                    "subClassId": 3
-                                                },
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Ends",
-                                                    "subClassId": 3
-                                                }
                                             ]
                                         },
                                         {
@@ -624,21 +387,6 @@
                                             "name": "Severity​",
                                             "subClassId": 1,
                                             "subFields": [
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Severe",
-                                                    "subClassId": 3
-                                                },
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Small",
-                                                    "subClassId": 3
-                                                },
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Acceptable",
-                                                    "subClassId": 3
-                                                }
                                             ]
                                         },
                                         {
@@ -651,33 +399,6 @@
                                                     "name": "NEW MEASUREMENT",
                                                     "subClassId": 2,
                                                     "measurements": [
-                                                        {
-                                                            "__type": "SerializeMeasure_LineSeg:#",
-                                                            "measureType": 0,
-                                                            "length": 0.285521716,
-                                                            "vertices": [
-                                                                {
-                                                                    "x": -4.15780735,
-                                                                    "y": 0.510817051,
-                                                                    "z": 0.336550027
-                                                                },
-                                                                {
-                                                                    "x": -4.12571335,
-                                                                    "y": 0.227104858,
-                                                                    "z": 0.336550057
-                                                                },
-                                                                {
-                                                                    "x": -4.087412,
-                                                                    "y": 0.01269989,
-                                                                    "z": 0.5760201
-                                                                },
-                                                                {
-                                                                    "x": -4.04520273,
-                                                                    "y": -0.0207209829,
-                                                                    "z": 0.6604003
-                                                                }
-                                                            ]
-                                                        }
                                                     ]
                                                 }
                                             ]
@@ -687,11 +408,6 @@
                                             "name": "Comment​",
                                             "subClassId": 1,
                                             "subFields": [
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Another inspection comment",
-                                                    "subClassId": 3
-                                                }
                                             ]
                                         }
                                     ]
@@ -1136,242 +852,6 @@
                                                 {
                                                     "__type": "DataFieldText:#",
                                                     "name": "Another inspection comment",
-                                                    "subClassId": 3
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "__type": "DataFieldCategory:#",
-                            "name": "Skew​",
-                            "subClassId": 1,
-                            "subFields": [
-                                {
-                                    "__type": "DataFieldText:#",
-                                    "name": "RA-28 Degrees​",
-                                    "subClassId": 3
-                                }
-                            ]
-                        },
-                        {
-                            "__type": "DataFieldCategory:#",
-                            "name": "Length​",
-                            "subClassId": 1,
-                            "subFields": [
-                                {
-                                    "__type": "DataFieldMeasurement:#",
-                                    "name": "NEW MEASUREMENT",
-                                    "subClassId": 2,
-                                    "measurements": []
-                                }
-                            ]
-                        },
-                        {
-                            "__type": "DataFieldCategory:#",
-                            "name": "Material​",
-                            "subClassId": 1,
-                            "subFields": [
-                                {
-                                    "__type": "DataFieldText:#",
-                                    "name": "Steel​",
-                                    "subClassId": 3
-                                }
-                            ]
-                        },
-                        {
-                            "__type": "DataFieldCategory:#",
-                            "name": "Construction​",
-                            "subClassId": 1,
-                            "subFields": [
-                                {
-                                    "__type": "DataFieldText:#",
-                                    "name": "Integral​",
-                                    "subClassId": 3
-                                }
-                            ]
-                        },
-                        {
-                            "__type": "DataFieldCategory:#",
-                            "name": "Label​",
-                            "subClassId": 1,
-                            "subFields": []
-                        },
-                        {
-                            "__type": "DataFieldCategory:#",
-                            "name": "Comments​",
-                            "subClassId": 1,
-                            "subFields": []
-                        }
-                    ]
-                },
-                {
-                    "__type": "DataFieldCategory:#",
-                    "name": "Substructure 1​",
-                    "subClassId": 1,
-                    "subFields": [
-                        {
-                            "__type": "DataFieldText:#",
-                            "name": "Abutment-3​",
-                            "subClassId": 3
-                        },
-                        {
-                            "__type": "DataFieldCategory:#",
-                            "name": "Associated Component​s",
-                            "subClassId": 1,
-                            "subFields": [
-                                {
-                                    "__type": "DataFieldCategory:#",
-                                    "name": "Component 1​",
-                                    "subClassId": 1,
-                                    "subFields": [
-                                        {
-                                            "__type": "DataFieldText:#",
-                                            "name": "Pier​",
-                                            "subClassId": 3
-                                        },
-                                        {
-                                            "__type": "DataFieldCategory:#",
-                                            "name": "Condition​",
-                                            "subClassId": 1,
-                                            "subFields": [
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Spalls​",
-                                                    "subClassId": 3
-                                                },
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Vertical Cracks​",
-                                                    "subClassId": 3
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "__type": "DataFieldCategory:#",
-                                            "name": "Location 1​",
-                                            "subClassId": 1,
-                                            "subFields": [
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Bottom​",
-                                                    "subClassId": 3
-                                                },
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Cap Face​",
-                                                    "subClassId": 3
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "__type": "DataFieldCategory:#",
-                                            "name": "Location 2​",
-                                            "subClassId": 1,
-                                            "subFields": []
-                                        },
-                                        {
-                                            "__type": "DataFieldCategory:#",
-                                            "name": "Severity​",
-                                            "subClassId": 1,
-                                            "subFields": [
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Small​",
-                                                    "subClassId": 3
-                                                },
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "Fine​",
-                                                    "subClassId": 3
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "__type": "DataFieldCategory:#",
-                                            "name": "Measurement​",
-                                            "subClassId": 1,
-                                            "subFields": [
-                                                {
-                                                    "__type": "DataFieldMeasurement:#",
-                                                    "name": "NEW MEASUREMENT",
-                                                    "subClassId": 2,
-                                                    "measurements": [
-                                                        {
-                                                            "__type": "SerializeMeasure_LineSeg:#",
-                                                            "measureType": 0,
-                                                            "length": 0.285521716,
-                                                            "vertices": [
-                                                                {
-                                                                    "x": -4.15780735,
-                                                                    "y": 0.510817051,
-                                                                    "z": 0.336550027
-                                                                },
-                                                                {
-                                                                    "x": -4.12571335,
-                                                                    "y": 0.227104858,
-                                                                    "z": 0.336550057
-                                                                },
-                                                                {
-                                                                    "x": -4.087412,
-                                                                    "y": 0.01269989,
-                                                                    "z": 0.5760201
-                                                                },
-                                                                {
-                                                                    "x": -4.04520273,
-                                                                    "y": -0.0207209829,
-                                                                    "z": 0.6604003
-                                                                }
-                                                            ]
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "__type": "DataFieldMeasurement:#",
-                                                    "name": "NEW MEASUREMENT",
-                                                    "subClassId": 2,
-                                                    "measurements": [
-                                                        {
-                                                            "__type": "SerializeMeasure_LineSeg:#",
-                                                            "measureType": 0,
-                                                            "length": 0.785521716,
-                                                            "vertices": [
-                                                                {
-                                                                    "x": -4.15780735,
-                                                                    "y": 0.510817051,
-                                                                    "z": 0.336550027
-                                                                },
-                                                                {
-                                                                    "x": -4.12571335,
-                                                                    "y": 0.227104858,
-                                                                    "z": 0.336550057
-                                                                },
-                                                                {
-                                                                    "x": -4.087412,
-                                                                    "y": 0.01269989,
-                                                                    "z": 0.5760201
-                                                                },
-                                                                {
-                                                                    "x": -4.04520273,
-                                                                    "y": -0.0207209829,
-                                                                    "z": 0.6604003
-                                                                }
-                                                            ]
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "__type": "DataFieldCategory:#",
-                                            "name": "Comment​",
-                                            "subClassId": 1,
-                                            "subFields": [
-                                                {
-                                                    "__type": "DataFieldText:#",
-                                                    "name": "This needs to be checked out or something lol​",
                                                     "subClassId": 3
                                                 }
                                             ]
