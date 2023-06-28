@@ -110,7 +110,14 @@ function grabSections(data)
     
                         if (attributes[l].measurements !== undefined)
                         {
-                            data = attributes[l].measurements[0].length;
+                            if (attributes[l].measurements[0].length !== undefined)
+                            {
+                                data = attributes[l].measurements[0].length + " m";
+                            }
+                            else if (data = attributes[l].measurements[0].area)
+                            {
+                                data = attributes[l].measurements[0].area + " m^2";
+                            }
                         }
     
                         newAttributeRow = attribute_table.insertRow(-1);
