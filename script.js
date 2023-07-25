@@ -16,7 +16,53 @@ fileInput.addEventListener("change", () => {
     })
 })
 
+function grabSections(data)
+{
+    Substructure_table = document.getElementById("SUBSTRUCTURE_Table");
 
+    // Substructure Components in JSON
+    var SC = data.subFields[2];
+
+    // Array of substructures
+    var substructures = SC.subFields;
+
+    for (var i = 0; i < substructures.length; i++)
+    {
+        // each iteration represents a Substructure
+        // returns an array of objects containing each substructure attribtue for each substructure i
+        var substructure = substructures[i];
+        //console.log(getLeaf(substructure[1]));
+
+        newRow = Substructure_table.insertRow(-1);
+        newCell = newRow.insertCell(-1);
+        newCell.outerHTML = "<th>" + substructure[0].name + "</th>";
+        //console.log(component[0].name);
+
+        
+        // Grabs each substructure attribute value, why is everyting an object? smh my head
+        // This will populate substructure rows
+        for (var j = 2; j < substructure.length; j++)
+        {
+            var component_attribute = substructure[j];
+
+            if (component_attribute.length == 0)
+            {
+                newCell = newRow.insertCell(-1);
+                newCell.outerHTML = "<td>null</td>";
+                //console.log("null");
+            }
+            else
+            {
+                newCell = newRow.insertCell(-1);
+                newCell.outerHTML = "<td>" + component_attribute[0].name + "</td>";
+                //console.log(component_attribute[0].name);
+            }
+        }
+    }
+
+}
+
+/*
 function grabSections(data)
 {
     Substructure_table = document.getElementById("SUBSTRUCTURE_Table");
@@ -136,6 +182,7 @@ function grabSections(data)
         }
     }
 }
+*/
 
 function getLeaf(root)
 {
@@ -185,80 +232,7 @@ function create_attribute_table(tableID, identifier1, identifier2)
     return html;
 }
 
-function parseData_OLD(data)
-{
-    //Grab tables to write to
-    BII_Table = document.getElementById("BII_table");
-    Deck_Table = document.getElementById("deck_table");
-    CGR_Table = document.getElementById("CGR_table");
-
-    let defects = data["subFields"][0].subFields;
-    let inspectors = data.subFields[1].subFields[1].subFields;
-
-    //Manual parse for inspection date, bad practice but JSON structure is unpredictable
-    document.getElementById("date_BII").textContent = data["subFields"][1]["subFields"][0]["subFields"][0]["name"];
-
-    // Adds all inspectors into the form
-    for (var i in inspectors)
-    {
-        newRow = BII_Table.insertRow(-1);
-        newCell = newRow.insertCell(0);
-        newCell.outerHTML = "<th>INSPECTOR " + i + ":</th>";
-
-        let inspectorName = document.createTextNode(inspectors[i].name);
-        newCell = newRow.insertCell(1);
-        newCell.appendChild(inspectorName);
-    }
-
-    for (var i in defects)
-    {
-        //console.log(defects[i].name);
-        newRow = Deck_Table.insertRow(-1);
-        
-        let text = "NULL"
-
-        // Populates DECK table, each case handles the ith column
-        for (let j = 0; j < 6; j++)
-        {
-            switch(j)
-            {
-                case 0:
-                    text = i;
-                    break;
-                case 1:
-                    text = defects[i].name;
-                    break;
-                case 2:
-                    text = defects[i].subFields[0].subFields[0].name;
-                    break;
-                case 3:
-                    text = defects[i].subFields[1].subFields[0].name;
-                    break;
-                case 4:
-                    text = String(defects[i].subFields[2].measurements[0].length);
-                    console.log(defects[i].subFields[2].name);
-                    break;
-                default:
-                    text = "NULL";
-            }
-
-            newCell = newRow.insertCell(-1);
-            newCell.innerText = text;
-            //let newText = document.createTextNode(text);
-            //newCell.appendChild(newText);
-        }
-
-        // Populates CGR table
-        newRow = CGR_Table.insertRow(-1);
-        for (let i = 0; i < 6; i++)
-        {
-            newCell = newRow.insertCell(-1);
-            newCell.innerText = "NULL";
-        }
-    }
-}
-
-//For hiding file input form
+// For hiding file input form
 function toggleForm()
 {
     var form = document.getElementById("file-form");
